@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ulaşım & Konum | Bacanaklar Lokantası</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="logo">Bacanaklar<span>.</span></a>
+        <ul class="nav-links">
+            <li><a href="index.html">Ana Sayfa</a></li>
+            <li><a href="menu.html">Menü</a></li>
+            <li><a href="ulasim.html" class="active">Ulaşım</a></li>
+            <li><a href="iletisim.html">İletişim</a></li>
+        </ul>
+    </nav>
+
+    <section class="menu-page-hero" style="background: linear-gradient(to bottom, rgba(10,10,10,0.7), #0a0a0a), url('bacanal.png') center/cover;">
+        <div class="menu-hero-text">
+            <h1 class="animate-fade-up">Yolunuz <span>Düşerse</span></h1>
+            <p class="animate-fade-up delay-1">Park Afyon'un tam karşısında, sıcacık çorbamız ve nefis ev yemeklerimizle sizi bekliyoruz.</p>
+        </div>
+    </section>
+
+    <section class="ulasim-page-section">
+        <div class="ulasim-grid">
+            
+            <!-- 1. KISIM: KARTLAR BÖLÜMÜ -->
+            <div class="ulasim-info-cards animate-fade-up delay-2">
+                
+                <div class="u-card">
+                    <i class="fa-solid fa-map-location-dot"></i>
+                    <div>
+                        <h3>Açık Adres</h3>
+                        <p>Cumhuriyet, İsmet İnönü Cd. 57/A, 03100 Afyonkarahisar Merkez/Afyonkarahisar</p>
+                    </div>
+                </div>
+
+                <div class="u-card">
+                    <i class="fa-solid fa-train-subway"></i>
+                    <div>
+                        <h3>Kolay Ulaşım</h3>
+                        <p>Şehrimizin en çok kullanılan alışveriş merkezi <strong>Park Afyon</strong>'un tam karşısında yer alıyoruz.</p>
+                    </div>
+                </div>
+
+            </div> <!-- İŞTE EKSİK OLAN VE DÜZENİ BOZAN KAPATMA ETİKETİ BURASIYDI -->
+
+
+            <!-- 2. KISIM: HARİTA BÖLÜMÜ -->
+            <div class="ulasim-map-container animate-fade-up delay-3">
+                <div class="map-wrapper page-big-map">
+                    <!-- Google Maps Embed Linki Düzeltildi -->
+                    <iframe 
+                        src="https://maps.google.com/maps?q=Bacanaklar%20lokantas%C4%B1,%20Afyonkarahisar&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+                        width="100%" 
+                        height="450" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                    <!-- Dışarı Yönlendiren Buton Linki -->
+                    <a href="https://www.google.com/maps/place/Bacanaklar+lokantası/@38.7551238,30.5512127,17z/" target="_blank" class="map-overlay-btn">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Büyük Haritada Aç
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer style="padding: 40px 8% 20px 8%; background:#050505; border-top:1px solid rgba(255,81,0,0.05)">
+        <div class="footer-bottom" style="padding:0; border:none;">
+            <p>© 2026 Bacanaklar Lokantası. Tüm Hakları  Talha Dündar'da Saklıdır.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

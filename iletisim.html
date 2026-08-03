@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim | Bacanaklar Lokantası</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="logo">Bacanaklar<span>.</span></a>
+        <ul class="nav-links">
+            <li><a href="index.html">Ana Sayfa</a></li>
+            <li><a href="menu.html">Menü</a></li>
+            <li><a href="ulasim.html">Ulaşım</a></li>
+            <li><a href="iletisim.html" class="active">İletişim</a></li>
+        </ul>
+    </nav>
+
+    <section class="menu-page-hero" style="background: linear-gradient(to bottom, rgba(10,10,10,0.7), #0a0a0a), url('https://images.unsplash.com/photo-1534536281715-e28d76689b4d?q=80&w=1200&auto=format&fit=crop') center/cover;">
+        <div class="menu-hero-text">
+            <h1 class="animate-fade-up">Bizimle <span>Konuşun</span></h1>
+            <p class="animate-fade-up delay-1">Sorularınız, toplu yemek siparişi talepleriniz veya önerileriniz için buradayız.</p>
+        </div>
+    </section>
+
+    <section class="contact-page-section">
+        <div class="contact-grid">
+            
+            <div class="contact-methods animate-fade-up delay-2">
+                <div class="c-method-box">
+                    <i class="fa-solid fa-phone"></i>
+                    <div>
+                        <h4>Telefon Numaramız</h4>
+                        <p>0551 220 42 02</p>
+                    </div>
+                </div>
+                <div class="c-method-box">
+                    <i class="fa-solid fa-envelope"></i>
+                    <div>
+                        <h4>E-Posta Adresimiz</h4>
+                        <p>info@bacanaklarlokantasi.com</p>
+                    </div>
+                </div>
+                <div class="c-method-box">
+                    <i class="fa-solid fa-hashtag"></i>
+                    <div>
+                        <h4>Sosyal Medyada Biz</h4>
+                        <p>@bacanaklarlokantasi</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form-container animate-fade-up delay-3">
+                <form class="glowing-form" onsubmit="event.preventDefault(); alert('Mesajınız başarıyla bacanaklara iletildi!');">
+                    <div class="form-group">
+                        <label for="name">Adınız Soyadınız</label>
+                        <input type="text" id="name" placeholder="Örn: Ahmet Yılmaz" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-Posta Adresiniz</label>
+                        <input type="email" id="email" placeholder="name@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mesajınız</label>
+                        <textarea id="message" rows="5" placeholder="Söylemek istediklerinizi buraya yazın..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
+                        Mesajı Gönder <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <footer style="padding: 40px 8% 20px 8%; background:#050505; border-top:1px solid rgba(255,81,0,0.05)">
+        <div class="footer-bottom" style="padding:0; border:none;">
+            <p>© 2026 Bacanaklar Lokantası. Tüm Hakları Saklıdır.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

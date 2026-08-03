@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menü | Bacanaklar Lokantası</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="logo">Bacanaklar<span>.</span></a>
+        <ul class="nav-links">
+            <li><a href="index.html">Ana Sayfa</a></li>
+            <li><a href="menu.html" class="active">Menü</a></li>
+            <li><a href="ulasim.html">Ulaşım</a></li>
+            <li><a href="iletisim.html">İletişim</a></li>
+        </ul>
+    </nav>
+
+    <section class="menu-page-hero">
+        <div class="menu-hero-text">
+            <h1 class="animate-fade-up"><span>Menümüz</span></h1>
+            <p class="animate-fade-up delay-1">Her sabah sevgiyle kaynayan kazanlardan tabağınıza süzülen tüm lezzetlerimiz.</p>
+        </div>
+    </section>
+
+    <section class="menu-filter-section">
+        <div class="filter-buttons animate-fade-up delay-2">
+            <button class="filter-btn active" data-filter="all">Tümü</button>
+            <button class="filter-btn" data-filter="corba">Çorbalar</button>
+            <button class="filter-btn" data-filter="ev-yemegi">Ev Yemekleri</button>
+            <button class="filter-btn" data-filter="tatli">Tatlılar</button>
+        </div>
+
+        <div class="menu-grid menu-page-grid animate-fade-up delay-3">
+            
+            <!-- ÇORBALAR -->
+            <div class="menu-card filter-item" data-category="corba">
+                <div class="card-img-container">
+                    <img src="mercimek.jpeg" alt="Mercimek Çorbası">
+                    <span class="card-badge">Çorba</span>
+                </div>
+                <div class="card-info">
+                    <h3>Mercimek</h3>
+                    <p>Kıtır ekmek ve tereyağlı sos eşliğinde, lokanta usulü tam kıvamında süzme mercimek çorbası.</p>
+                    <div class="card-footer"><span class="price">110 TL</span></div>
+                </div>
+            </div>
+
+             <div class="menu-card filter-item" data-category="corba">
+                <div class="card-img-container">
+                    <img src="iskembe.png" alt="İşkembe Çorbası">
+                    <span class="card-badge">Çorba</span>
+                </div>
+                <div class="card-info">
+                    <h3>İşkembe</h3>
+                    <p>Sarımsak ve sirkenin muhteşem uyumuyla, geceyi şifalandıran terbiyeli, dumanı üstünde işkembe.</p>
+                    <div class="card-footer"><span class="price">145 TL</span></div>
+                </div>
+            </div>
+
+             <div class="menu-card filter-item" data-category="corba">
+                <div class="card-img-container">
+                    <img src="tandircorbasi.png" alt="Tandır Çorbası">
+                    <span class="card-badge">Çorba</span>
+                </div>
+                <div class="card-info">
+                    <h3>Tandır</h3>
+                    <p>Özel baharatlarla harmanlanmış, ağır ateşte lokum gibi pişmiş et parçalarıyla zenginleşen efsane lezzet.</p>
+                    <div class="card-footer"><span class="price">145 TL</span></div>
+                </div>
+            </div>
+
+            <div class="menu-card filter-item" data-category="corba">
+                <div class="card-img-container">
+                    <img src="ayakpaca.png" alt="Ayak Paça Çorbası">
+                    <span class="card-badge">Çorba</span>
+                </div>
+                <div class="card-info">
+                    <h3>Ayak Paça</h3>
+                    <p>İlikli kemik suyuyla saatlerce kaynatılmış, kolajen deposu, yoğun ve doyurucu şifa kaynağı.</p>
+                    <div class="card-footer"><span class="price">170 TL</span></div>
+                </div>
+            </div>
+
+            <div class="menu-card filter-item" data-category="corba">
+                <div class="card-img-container">
+                    <img src="ezogelin.png" alt="Ezogelin Çorbası">
+                    <span class="card-badge">Çorba</span>
+                </div>
+                <div class="card-info">
+                    <h3>Ezogelin</h3>
+                    <p>Taze nane ve kavrulmuş salça aromasıyla, anne mutfağından sofranıza uzanan sıcacık klasik.</p>
+                    <div class="card-footer"><span class="price">110 TL</span></div>
+                </div>
+            </div>
+
+            <div class="menu-card filter-item" data-category="corba">
+                <div class="card-img-container">
+                    <img src="kellepaca.png" alt="Kelle Paça Çorbası">
+                    <span class="card-badge">Çorba</span>
+                </div>
+                <div class="card-info">
+                    <h3>Kelle Paça</h3>
+                    <p>Sarımsaklı özel sosu ve bol kemik sulu yapısıyla, ustasının elinden çıkan gerçek şifa kaynağı.</p>
+                    <div class="card-footer"><span class="price">170 TL</span></div>
+                </div>
+            </div>
+
+            <!-- EV YEMEKLERİ -->
+            <div class="menu-card filter-item" data-category="ev-yemegi">
+                <div class="card-img-container">
+                    <img src="kurufasulye.jpeg" alt="Kuru Fasulye">
+                    <span class="card-badge">Ev Yemeği</span>
+                </div>
+                <div class="card-info">
+                    <h3>Kuru Fasulye</h3>
+                    <p>Geleneksel güveçte, taze tereyağı ve özel sosuyla ağır ağır pişmiş anne usulü kuru fasulye.</p>
+                    <div class="card-footer"><span class="price">150 TL</span></div>
+                </div>
+            </div>
+
+            <div class="menu-card filter-item" data-category="ev-yemegi">
+                <div class="card-img-container">
+                    <img src="danatandir.png" alt="Dana Tandır">
+                    <span class="card-badge">Ev Yemeği</span>
+                </div>
+                <div class="card-info">
+                    <h3>Dana Tandır</h3>
+                    <p>Özel taş fırında saatlerce pişerek tel tel ayrılan, ağızda dağılan lokum gibi dana eti.</p>
+                    <div class="card-footer"><span class="price">380 TL</span></div>
+                </div>
+            </div>
+
+            <div class="menu-card filter-item" data-category="ev-yemegi">
+                <div class="card-img-container">
+                    <img src="tavuksote.png" alt="Tavuk Sote">
+                    <span class="card-badge">Ev Yemeği</span>
+                </div>
+                <div class="card-info">
+                    <h3>Tavuk Sote</h3>
+                    <p>Taptaze renkli biberler, domates ve yumuşacık tavuk göğsünün enfes sosla buluştuğu lezzet şöleni.</p>
+                    <div class="card-footer"><span class="price">275 TL</span></div>
+                </div>
+            </div>
+
+            <div class="menu-card filter-item" data-category="ev-yemegi">
+                <div class="card-img-container">
+                    <img src="danakavurma.png" alt="Dana Kavurma">
+                    <span class="card-badge">Ev Yemeği</span>
+                </div>
+                <div class="card-info">
+                    <h3>Dana Kavurma</h3>
+                    <p>Kendi yağında kavrularak lezzetine lezzet katmış, yumuşacık etleriyle gerçek bir lokanta klasiği.</p>
+                    <div class="card-footer"><span class="price">380 TL</span></div>
+                </div>
+            </div>
+
+            <div class="menu-card filter-item" data-category="ev-yemegi">
+                <div class="card-img-container">
+                    <img src="izmirkofte.png" alt="İzmir Köfte">
+                    <span class="card-badge">Ev Yemeği</span>
+                </div>
+                <div class="card-info">
+                    <h3>İzmir Köfte</h3>
+                    <p>Özenle yoğrulmuş köfteler, fırınlanmış patates ve nefis domates sosunun fırın tepsisindeki muhteşem buluşması.</p>
+                    <div class="card-footer"><span class="price">280 TL</span></div>
+                </div>
+            </div>
+
+            <div class="menu-card filter-item" data-category="ev-yemegi">
+                <div class="card-img-container">
+                    <img src="karniyarik.png" alt="Patlıcan Karnıyarık">
+                    <span class="card-badge">Ev Yemeği</span>
+                </div>
+                <div class="card-info">
+                    <h3>Patlıcan Karnıyarık</h3>
+                    <p>Fırınlanmış taze patlıcanların arasında bol domates soslu, kıymalı harç ve enfes baharatlar.</p>
+                    <div class="card-footer"><span class="price">275 TL</span></div>
+                </div>
+            </div>
+
+            <div class="menu-card filter-item" data-category="ev-yemegi">
+                <div class="card-img-container">
+                    <img src="sebzeyemekleri.png" alt="Sebze Yemekleri">
+                    <span class="card-badge">Ev Yemeği</span>
+                </div>
+                <div class="card-info">
+                    <h3>Sebze Yemekleri</h3>
+                    <p>Mevsimin en taze sebzeleriyle zeytinyağlı olarak hazırlanan, hafif ve vitamin dolu ev yemeği alternatifleri.</p>
+                    <div class="card-footer"><span class="price">200 TL</span></div>
+                </div>
+            </div>
+
+            <div class="menu-card filter-item" data-category="ev-yemegi">
+                <div class="card-img-container">
+                    <img src="tavukbut.png" alt="Tavuk But">
+                    <span class="card-badge">Ev Yemeği</span>
+                </div>
+                <div class="card-info">
+                    <h3>Tavuk But</h3>
+                    <p>Fırında nar gibi kızarmış, dışı çıtır, içi sulu sulu kalan mükemmel soslu tavuk incik.</p>
+                    <div class="card-footer"><span class="price">180 TL</span></div>
+                </div>
+            </div>
+
+            <div class="menu-card filter-item" data-category="ev-yemegi">
+                <div class="card-img-container">
+                    <img src="keskek.png" alt="Keşkek">
+                    <span class="card-badge">Ev Yemeği</span>
+                </div>
+                <div class="card-info">
+                    <h3>Keşkek</h3>
+                    <p>Dövülmüş buğday ve etin saatlerce tahta kaşıkla sakız gibi olana dek dövüldüğü, düğünlerin ve bayramların baş tacı.</p> 
+                    <div class="card-footer"><span class="price">150 TL</span></div>
+                </div>
+            </div>
+
+            <div class="menu-card filter-item" data-category="ev-yemegi">
+                <div class="card-img-container">
+                    <img src="nohut.png" alt="Nohut">
+                    <span class="card-badge">Ev Yemeği</span>
+                </div>
+                <div class="card-info">
+                    <h3>Nohut</h3>
+                    <p>İlikli kemik suyu ve ev salçasıyla özdeşleşmiş, dumanı tüten, lokum kıvamında sulu tencere yemeği.</p>
+                    <div class="card-footer"><span class="price">150 TL</span></div>
+                </div>
+            </div>
+
+            <!-- TATLILAR -->
+            <div class="menu-card filter-item" data-category="tatli">
+                <div class="card-img-container">
+                    <img src="sutlac.png" alt="Fırın Sütlaç">
+                    <span class="card-badge">Tatlı</span>
+                </div>
+                <div class="card-info">
+                    <h3>Fırın Sütlaç</h3>
+                    <p>Fırında üzeri nar gibi kızarmış geleneksel sütlaç.</p>
+                    <div class="card-footer"><span class="price">100 TL</span></div>
+                </div>
+            </div>
+
+            <div class="menu-card filter-item" data-category="tatli">
+                <div class="card-img-container">
+                    <img src="kazandibi.png" alt="Kazandibi">
+                    <span class="card-badge">Tatlı</span>
+                </div>
+                <div class="card-info">
+                    <h3>Kazandibi</h3>
+                    <p>Altı hafifçe tutturulmuş, yoğun süt kaymağı lezzeti ve nefis karamelize kokusuyla klasik tatlımız.</p>
+                    <div class="card-footer"><span class="price">100 TL</span></div>
+                </div>
+            </div>
+
+            <div class="menu-card filter-item" data-category="tatli">
+                <div class="card-img-container">
+                    <img src="ekmekkad.png" alt="Ekmek Kadayıfı">
+                    <span class="card-badge">Tatlı</span>
+                </div>
+                <div class="card-info">
+                    <h3>Ekmek Kadayıfı</h3>
+                    <p>Şerbetini tam çekmiş, arasına meşhur kaymak serilerek lezzet doruklarına ulaştırılan efsanevi kapanış.</p>
+                    <div class="card-footer"><span class="price">100 TL</span></div>
+                </div>
+            </div>
+
+            <div class="menu-card filter-item" data-category="tatli">
+                <div class="card-img-container">
+                    <img src="burmak.png" alt="Burma Kadayıf">
+                    <span class="card-badge">Tatlı</span>
+                </div>
+                <div class="card-info">
+                    <h3>Burma Kadayıf</h3>
+                    <p>Bol fıstıklı, çıtır çıtır hamuru ve tam kıvamında şerbetiyle damak çatlatan burma lezzeti.</p>
+                    <div class="card-footer"><span class="price">100 TL</span></div>
+                </div>
+            </div>
+
+            <div class="menu-card filter-item" data-category="tatli">
+                <div class="card-img-container">
+                    <img src="kabak.png" alt="Kabak Tatlısı">
+                    <span class="card-badge">Tatlı</span>
+                </div>
+                <div class="card-info">
+                    <h3>Kabak Tatlısı</h3>
+                    <p>Tahin ve iri ceviz parçalarıyla taçlandırılmış, lokum gibi fırınlanmış geleneksel kabak tatlısı.</p>
+                    <div class="card-footer"><span class="price">100 TL</span></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer style="padding: 40px 8% 20px 8%; background:#050505; border-top:1px solid rgba(255,81,0,0.05)">
+        <div class="footer-bottom" style="padding:0; border:none; text-align: center;">
+            <p>© 2026 Bacanaklar Lokantası. Tüm Hakları Saklıdır. Tasarım ve Kodlama: Talha Dündar.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

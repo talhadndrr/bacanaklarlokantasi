@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bacanaklar | Ev Yemekleri & Çorba</title>
+    
+    <!-- Dış Bağlantılar ve Fontlar -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,400&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Animasyon Kütüphaneleri (Daktilo ve 3D Kartlar) -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- YENİ NESİL ANİMASYON MOTORU -->
+    <style>
+/* SİNEMATİK GİRİŞ EKRANI STİLLERİ (YENİ) */
+        #preloader {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100vh;
+            background-color: #050505; z-index: 99999;
+            display: flex; justify-content: center; align-items: center;
+            overflow: hidden;
+            /* YENİ: 3D Kaybolma geçiş süresi */
+            transition: opacity 0.8s ease, visibility 0.8s ease, transform 1.2s cubic-bezier(0.77, 0, 0.175, 1);
+        }
+
+        /* Ekranın üstümüze doğru büyüyerek (Zoom) kaybolmasını sağlayan sınıf */
+        #preloader.fade-out-zoom {
+            opacity: 0;
+            visibility: hidden;
+            transform: scale(1.3); /* Yüzde 30 büyüyerek kaybolur */
+        }
+
+        /* Derinden vuran kalp atışı gibi turuncu arka plan ışığı */
+        .loader-bg {
+            position: absolute; width: 100%; height: 100%;
+            background: radial-gradient(circle at center, rgba(255, 81, 0, 0.15) 0%, #050505 60%);
+            animation: pulseIntroBg 2s infinite alternate;
+        }
+
+        /* Logonun etrafında dönen sihirli ateş çemberi */
+        .loader-ring {
+            position: absolute;
+            width: 320px; height: 320px;
+            border-radius: 50%;
+            border: 2px solid transparent;
+            border-top-color: #ff5100;
+            border-bottom-color: #ffb700;
+            animation: spinRing 2s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite;
+        }
+
+        /* Zarif Alt Başlık */
+        .loader-subtitle {
+            margin-top: 15px;
+            color: #ffb700;
+            font-size: 16px;
+            letter-spacing: 6px;
+            text-transform: uppercase;
+            font-weight: 400;
+            opacity: 0;
+            animation: fadeInSubtitle 1s ease forwards 0.8s;
+        }
+
+        @keyframes pulseIntroBg {
+            0% { transform: scale(1); opacity: 0.6; }
+            100% { transform: scale(1.1); opacity: 1; }
+        }
+
+        @keyframes spinRing {
+            0% { transform: rotate(0deg) scale(0.9); opacity: 0; }
+            50% { opacity: 0.8; transform: rotate(180deg) scale(1.05); }
+            100% { transform: rotate(360deg) scale(0.9); opacity: 0; }
+        }
+
+        @keyframes fadeInSubtitle {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Akan Sıvı Ateş Metni (Daktilo ile uyumlu) */
+        .anim-text-flow {
+            background: linear-gradient(90deg, #ff5100, #ffb700, #ffce54, #ff5100);
+            background-size: 300% auto;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: transparent;
+            animation: textGradientFlow 2s linear infinite !important;
+            display: inline-block;
+        }
+        @keyframes textGradientFlow {
+            0% { background-position: 0% center; }
+            100% { background-position: 300% center; }
+        }
+
+        /* Uçuşan Ateş Kıvılcımları */
+        .sparks-container {
+            position: absolute; width: 100%; height: 100%; top: 0; left: 0; 
+            pointer-events: none; overflow: hidden; z-index: 0;
+        }
+        .spark {
+            position: absolute; bottom: -10px; background: #ff5100;
+            border-radius: 50%; box-shadow: 0 0 10px #ff5100, 0 0 20px #ffb700;
+            animation: riseUpSparks linear infinite;
+        }
+        @keyframes riseUpSparks {
+            0% { transform: translateY(0) scale(1); opacity: 1; }
+            100% { transform: translateY(-100vh) scale(0); opacity: 0; }
+        }
+
+        /* Zıplayan Mouse İkonu (Aşağı Kaydır) */
+        .scroll-indicator {
+            position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%);
+            z-index: 10; text-align: center; opacity: 0.7; transition: opacity 0.3s;
+        }
+        .scroll-indicator:hover { opacity: 1; }
+        .mouse-icon {
+            width: 30px; height: 50px; border: 2px solid #ff5100; border-radius: 20px;
+            display: inline-block; position: relative;
+        }
+        .wheel {
+            width: 4px; height: 8px; background: #ffb700; border-radius: 2px;
+            position: absolute; top: 8px; left: 50%; transform: translateX(-50%);
+            animation: scrollWheel 1.5s infinite;
+        }
+        @keyframes scrollWheel {
+            0% { top: 8px; opacity: 1; }
+            100% { top: 25px; opacity: 0; }
+        }
+
+        /* Diğer Gelişmiş Animasyonlar */
+        .anim-pulse-button { animation: pulseShadow 2s infinite !important; }
+        @keyframes pulseShadow {
+            0% { box-shadow: 0 0 0 0 rgba(255, 81, 0, 0.8); }
+            70% { box-shadow: 0 0 0 15px rgba(255, 81, 0, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 81, 0, 0); }
+        }
+        .anim-float-wrapper { animation: floatUpDown 3s ease-in-out infinite; display: inline-block; }
+        @keyframes floatUpDown {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+        .anim-zoom-pan img { transition: transform 10s ease; animation: kenBurnsEffect 10s infinite alternate; }
+        @keyframes kenBurnsEffect { 0% { transform: scale(1); } 100% { transform: scale(1.15); } }
+        .feature-item i { animation: bounceIcon 2.5s infinite !important; }
+        @keyframes bounceIcon {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+        .anim-spin-slow { animation: spinSlowly 15s linear infinite !important; }
+        @keyframes spinSlowly { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+        
+        /* 3D Kart Özelleştirmeleri */
+        .menu-card { transform-style: preserve-3d; border-radius: 20px; }
+        .card-img-container { transform: translateZ(30px); }
+        .card-info { transform: translateZ(20px); }
+    </style>
+</head>
+<body>
+
+  <!-- YENİ SİNEMATİK GİRİŞ EKRANI (PRELOADER) -->
+    <div id="preloader">
+        <div class="loader-bg"></div>
+        <div class="loader-ring"></div>
+        <div class="loader-content">
+            <div class="loader-steam"></div>
+            <div class="loader-logo">Bacanaklar<span>.</span></div>
+            <div class="loader-subtitle">Geleneksel Lezzet Durağı</div>
+        </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar animate-fade-up">
+        <a href="index.html" class="logo">Bacanaklar<span>.</span></a>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Ana Sayfa</a></li>
+            <li><a href="menu.html">Menü</a></li>
+            <li><a href="ulasim.html">Ulaşım</a></li>
+            <li><a href="iletisim.html">İletişim</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO BÖLÜMÜ -->
+    <header class="hero">
+        <div class="sparks-container" id="sparks-zone"></div>
+        <div class="hero-container">
+            
+            <div class="hero-content" style="z-index: 2;">
+                <div class="animate-fade-up">
+                    <div class="badge anim-float-wrapper">
+                        <i class="fa-solid fa-fire"></i> Bi' çorbaya ne dersin?
+                    </div>
+                </div>
+                
+                <!-- DAKTİLO EFEKTİ BURADA ÇALIŞACAK -->
+                <h1 class="hero-title animate-fade-up delay-1" style="min-height: 130px;">
+                    <span id="daktilo-yazi"></span>
+                </h1>
+                
+                <p class="hero-desc animate-fade-up delay-2">
+                    Anne eli değmiş gibi doğal, en taze malzemelerle her sabah sevgiyle kaynayan çorbalar ve içinizi ısıtacak ev yemekleri. Lezzet şölenine davetlisiniz.
+                </p>
+                
+                <div class="hero-actions animate-fade-up delay-3">
+                    <a href="menu.html" class="btn btn-primary anim-pulse-button" style="text-decoration: none;">
+                        Menüyü Keşfet <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="index.html#about" class="btn btn-secondary" style="text-decoration: none;">
+                        <i class="fa-solid fa-play"></i> Hakkımızda
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-image-area animate-fade-up delay-2" style="z-index: 2;">
+                <div class="glow-bg"></div>
+                <div class="interactive-layer" id="parallax-scene">
+                    <div class="main-dish-wrapper" data-depth="0.2">
+                        <img src="bacanaklarlokanta.png" alt="Sıcak Çorba" class="main-dish">
+                        <div class="steam-container" id="steam-zone"></div>
+                    </div>
+                    <div class="floating-item pepper" data-depth="0.5">🌶️</div>
+                    <div class="floating-item mint" data-depth="0.8">🌿</div>
+                    <div class="floating-item garlic" data-depth="0.4">🧄</div>
+                    <div class="floating-item onion" data-depth="0.6">🧅</div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Zıplayan Fare İkonu -->
+        <a href="#tavsiyeler" class="scroll-indicator">
+            <div class="mouse-icon"><div class="wheel"></div></div>
+        </a>
+    </header>
+
+    <!-- MENÜ BÖLÜMÜ -->
+    <section class="featured-menu" id="tavsiyeler">
+        <div class="menu-header reveal">
+            <h2 class="section-title">En Çok <span>Tavsiye Edilenler</span></h2>
+            <p class="section-subtitle">Misafirlerimizin damak tadından tam not almış, lokantamızın en sevilen imza lezzetleri.</p>
+        </div>
+
+        <div class="menu-grid">
+            <!-- 3D TILT EKLENMİŞ KARTLAR -->
+            <div class="menu-card reveal delay-1" data-tilt data-tilt-glare data-tilt-max-glare="0.3" data-tilt-max="15">
+                <div class="card-img-container anim-zoom-pan">
+                    <img src="kellepaca.png" alt="Kelle Paça Çorbası">
+                    <span class="card-badge">Çorba</span>
+                </div>
+                <div class="card-info">
+                    <h3>Kelle Paça Çorbası</h3>
+                    <p>Tereyağ eşliğinde, lokanta usulü tam kıvamında süzme mercimek.</p>
+                    <div class="card-footer">
+                        <span class="price">170 TL</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-card reveal delay-2" data-tilt data-tilt-glare data-tilt-max-glare="0.3" data-tilt-max="15">
+                <div class="card-img-container anim-zoom-pan">
+                    <img src="ayakpaca.png" alt="Ayak Paça">
+                    <span class="card-badge">Ev Yemeği</span>
+                </div>
+                <div class="card-info">
+                    <h3>Ayak Paça</h3>
+                    <p>Geleneksel, taze tereyağı ve özel sosuyla ağır ağır pişmiş anne usulü kuru fasulye.</p>
+                    <div class="card-footer">
+                        <span class="price">170 TL</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-card reveal delay-3" data-tilt data-tilt-glare data-tilt-max-glare="0.3" data-tilt-max="15">
+                <div class="card-img-container anim-zoom-pan">
+                    <img src="tandircorbasi.png" alt="Zeytinyağlı Sarmalar">
+                    <span class="card-badge">Çorba</span>
+                </div>
+                <div class="card-info">
+                    <h3>Tandır Çorbası</h3>
+                    <p>Ege'nin taze asma yapraklarından, içi bol baharatlı bir harç ve hafif.</p>
+                    <div class="card-footer">
+                        <span class="price">145 TL</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-more-action reveal delay-2">
+            <a href="menu.html" class="btn btn-outline-orange" style="text-decoration: none;">
+                Menünün Devamı <i class="fa-solid fa-chevron-right"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- HAKKIMIZDA BÖLÜMÜ -->
+    <section class="about-section" id="about">
+        <div class="about-container">
+            <div class="about-content reveal">
+                <span class="about-badge anim-text-flow">Hakkımızda</span>
+                <h2 class="about-title">Her Sabah 08:00'te <br><span>Yanan Ocağın</span> Öyküsü</h2>
+                <p class="about-text">
+                    Yapay hiçbir malzeme kullanmadan, tıpkı evinizdeki gibi taptaze sebzelerle ve ağır ağır kaynayan kemik sularıyla çorbalarımızı hazırlıyoruz.
+                </p>
+                <p class="about-text">
+                    Kazanımızın buharı, lokantamıza adım attığınız an içinizi ısıtacak o samimi atmosferin ta kendisidir. Derdimiz hızlı tüketim değil; unutulmaya yüz tutmuş o gerçek anne yemeği lezzetini yaşatmak.
+                </p>
+                
+                <div class="about-features">
+                    <div class="feature-item reveal delay-1">
+                        <i class="fa-solid fa-leaf"></i>
+                        <div>
+                            <h4>%100 Doğal</h4>
+                            <p>Katkısız, yerli üretim malzemeler.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item reveal delay-2">
+                        <i class="fa-solid fa-clock"></i>
+                        <div>
+                            <h4>Her Gün Taze</h4>
+                            <p>Asla ertesi güne bırakılmaz.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-gallery">
+                <div class="gallery-wrapper">
+                    <div class="img-box box-1 reveal delay-1 anim-zoom-pan">
+                        <img src="karahisar.jpg" alt="Karahisar Kalesi">
+                    </div>
+                    <div class="img-box box-2 reveal delay-3 anim-zoom-pan">
+                        <img src="akarcay.jpg" alt="Akarçay">
+                    </div>
+                    <div class="deco-circle reveal delay-2 anim-spin-slow"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER BÖLÜMÜ -->
+    <footer class="site-footer" id="footer">
+        <div class="footer-container">
+            
+            <div class="footer-info reveal">
+                <a href="index.html" class="logo">Bacanaklar<span>.</span></a>
+                <p class="footer-tagline" style="margin-top: 20px;">Her sabah aynı sevgiyle, taptaze ve sıcacık kaynayan lezzet ocağı.</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/bacanaklarlokantasi/" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    
+                </div>
+            </div>
+
+            <div class="footer-hours reveal delay-1">
+                <h3><i class="fa-solid fa-clock"></i> Çalışma Saatleri</h3>
+                <ul class="hours-list">
+                    <li class="day-row" data-day="1"><span>Pazartesi</span> <span>08.00 - 04.00</span></li>
+                    <li class="day-row" data-day="2"><span>Salı</span> <span>08.00 - 04.00</span></li>
+                    <li class="day-row" data-day="3"><span>Çarşamba</span> <span>08.00 - 04.00</span></li>
+                    <li class="day-row" data-day="4"><span>Perşembe</span> <span>08.00 - 04.00</span></li>
+                    <li class="day-row" data-day="5"><span>Cuma</span> <span>08.00 - 04.00</span></li>
+                    <li class="day-row" data-day="6"><span>Cumartesi</span> <span>08:00 - 04.00</span></li>
+                    <li class="day-row" data-day="0"><span>Pazar</span> <span class="closed">19.00 - 03.00</span></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact reveal delay-2">
+                <h3><i class="fa-solid fa-map-location-dot"></i> Ulaşım Bilgileri</h3>
+                <p class="address-text">Cumhuriyet, İsmet İnönü Cd. 57/A, 03100 Afyonkarahisar Merkez/Afyonkarahisar</p>
+                
+                <div class="map-wrapper">
+                    <iframe 
+                        src="https://maps.google.com/maps?q=Bacanaklar%20lokantas%C4%B1,%20Afyonkarahisar&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+                        width="100%" 
+                        height="220" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                    <a href="https://maps.google.com/maps?q=Bacanaklar%20lokantas%C4%B1,%20Afyonkarahisar&t=&z=16&ie=UTF8&iwloc=&output=embed">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Haritalar'da aç
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        
+        <div class="footer-bottom reveal delay-3">
+            <p>© 2026 Bacanaklar Lokantası. Tasarım ve Kodlama: Talha Dündar.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    
+    <!-- YENİ: DAKTİLO, ATEŞ KIVILCIMLARI VE EKRAN SCRİPTLERİ -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // YENİ 3D SİNEMATİK GİRİŞ EFEKTİ
+            setTimeout(function() {
+                var loader = document.getElementById('preloader');
+                if(loader) {
+                    // İçeri doğru büyüyerek kaybolma sınıfını ekle
+                    loader.classList.add('fade-out-zoom');
+                    setTimeout(function() { loader.style.display = "none"; }, 1000); 
+                }
+            }, 2000);
+
+            // 2. Tpyed.js Daktilo Efekti
+            var typed = new Typed('#daktilo-yazi', {
+                strings: [
+                    'Ruhu Isıtan <br> <span class="anim-text-flow">Geleneksel</span> Lezzetler', 
+                    'Her Sabah <br> <span class="anim-text-flow">Sıcacık</span> Çorbalar',
+                    'Anne Eli Değmiş <br> <span class="anim-text-flow">Nefis</span> Yemekler'
+                ],
+                typeSpeed: 60,   // Yazma hızı
+                backSpeed: 40,   // Silme hızı
+                backDelay: 3000, // Ekranda kalma süresi
+                loop: true,      // Sürekli tekrar et
+                showCursor: true,
+                cursorChar: '|',
+            });
+
+            // 3. Arka Plan Ateş Kıvılcımları (Sparks)
+            function createSpark() {
+                const sparksZone = document.getElementById('sparks-zone');
+                if(!sparksZone) return;
+                const spark = document.createElement('div');
+                spark.classList.add('spark');
+                
+                let size = Math.random() * 4 + 2; 
+                spark.style.width = size + 'px';
+                spark.style.height = size + 'px';
+                spark.style.left = Math.random() * 100 + '%';
+                
+                let duration = Math.random() * 3 + 3;
+                spark.style.animationDuration = duration + 's';
+                
+                sparksZone.appendChild(spark);
+                
+                setTimeout(() => { spark.remove(); }, duration * 1000);
+            }
+            setInterval(createSpark, 300); // Her 300ms'de bir kıvılcım çıkar
+        });
+    </script>
+</body>
+</html>
