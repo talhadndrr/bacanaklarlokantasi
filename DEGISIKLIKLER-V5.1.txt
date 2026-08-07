@@ -1,0 +1,9 @@
+Bacanaklar Lokantası V5.1 — Mobil alt bar düzeltmesi
+
+- Mobil hızlı işlem çubuğu ekranın altına sıfır sabitlendi.
+- Android Chrome / iOS Safari scroll sırasında titremeye yol açan backdrop-filter kaldırıldı.
+- iPhone safe-area desteği için viewport-fit=cover eklendi.
+- Alt bar ve body boşluğu safe-area yüksekliğine göre ayarlandı.
+- Bar compositor katmanına alınarak scroll yeniden çizimi azaltıldı.
+- Mobil butonlara daha stabil dokunma davranışı eklendi.
+- Footer'ın sabit bar tarafından örtülmemesi için alt boşluk güncellendi.

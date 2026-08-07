@@ -1,0 +1,14 @@
+BACANAKLAR LOKANTASI V5.1 KURULUM
+
+1) ZIP içindeki bacanaklar-v5-1 klasörünün dosyalarını mevcut Git klasörüne kopyalayın:
+   C:\Users\TlhaD\OneDrive\Masaüstü\bacanaklarlokantasi-git
+
+2) PowerShell:
+   cd "$HOME\OneDrive\Masaüstü\bacanaklarlokantasi-git"
+   git status
+   git add .
+   git commit -m "Bacanaklar V5.1 mobil alt bar duzeltmesi"
+   git push origin main
+
+3) Vercel deploy tamamlandıktan sonra telefonda sayfayı tamamen yenileyin.
+   Mümkünse bir kez gizli sekmede de test edin.
