@@ -2,15 +2,15 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bacanaklar Lokantası | Afyonkarahisar Ev Yemekleri &amp; Çorba</title>
     <!-- BACANAKLAR SEO START -->
     <meta name="description" content="Afyonkarahisar&#x27;da kelle paça, işkembe, tandır çorbası ve günlük ev yemekleri. Bacanaklar Lokantası Park Afyon karşısında, sıcak ve taze lezzetlerle hizmetinizde.">
     <meta name="robots" content="index,follow,max-image-preview:large">
     <meta name="theme-color" content="#050505">
     <link rel="canonical" href="https://bacanaklarlokantasi.vercel.app/">
-    <link rel="icon" type="image/png" href="/bacanaklarlokanta.png">
-    <link rel="apple-touch-icon" href="/bacanaklarlokanta.png">
+    <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+    <link rel="apple-touch-icon" href="/assets/images/favicon.png">
 
     <meta property="og:locale" content="tr_TR">
     <meta property="og:type" content="website">
@@ -18,13 +18,13 @@
     <meta property="og:title" content="Bacanaklar Lokantası | Afyonkarahisar Ev Yemekleri &amp; Çorba">
     <meta property="og:description" content="Afyonkarahisar&#x27;da kelle paça, işkembe, tandır çorbası ve günlük ev yemekleri. Bacanaklar Lokantası Park Afyon karşısında, sıcak ve taze lezzetlerle hizmetinizde.">
     <meta property="og:url" content="https://bacanaklarlokantasi.vercel.app/">
-    <meta property="og:image" content="https://bacanaklarlokantasi.vercel.app/bacanaklarlokanta.png">
+    <meta property="og:image" content="https://bacanaklarlokantasi.vercel.app/assets/images/bacanaklarlokanta-social.png">
     <meta property="og:image:alt" content="Bacanaklar Lokantası geleneksel lezzetleri">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Bacanaklar Lokantası | Afyonkarahisar Ev Yemekleri &amp; Çorba">
     <meta name="twitter:description" content="Afyonkarahisar&#x27;da kelle paça, işkembe, tandır çorbası ve günlük ev yemekleri. Bacanaklar Lokantası Park Afyon karşısında, sıcak ve taze lezzetlerle hizmetinizde.">
-    <meta name="twitter:image" content="https://bacanaklarlokantasi.vercel.app/bacanaklarlokanta.png">
+    <meta name="twitter:image" content="https://bacanaklarlokantasi.vercel.app/assets/images/bacanaklarlokanta-social.png">
 
     <script type="application/ld+json">
 {
@@ -36,10 +36,10 @@
   "telephone": "+90 551 220 42 02",
   "email": "info@bacanaklarlokantasi.com",
   "image": [
-    "https://bacanaklarlokantasi.vercel.app/bacanaklarlokanta.png",
-    "https://bacanaklarlokantasi.vercel.app/kellepaca.png"
+    "https://bacanaklarlokantasi.vercel.app/assets/images/bacanaklarlokanta-social.png",
+    "https://bacanaklarlokantasi.vercel.app/assets/images/kellepaca.webp"
   ],
-  "logo": "https://bacanaklarlokantasi.vercel.app/bacanaklarlokanta.png",
+  "logo": "https://bacanaklarlokantasi.vercel.app/assets/images/bacanaklarlokanta-social.png",
   "priceRange": "₺₺",
   "servesCuisine": [
     "Türk Mutfağı",
@@ -76,13 +76,16 @@
     <!-- Dış Bağlantılar ve Fontlar -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://unpkg.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,400&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- Animasyon Kütüphaneleri (Daktilo ve 3D Kartlar) -->
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js" defer></script>
 
+    <link rel="preload" as="image" href="assets/images/bacanaklarlokanta.webp" type="image/webp" fetchpriority="high">
     <link rel="stylesheet" href="style.css">
     
     <!-- YENİ NESİL ANİMASYON MOTORU -->
@@ -304,7 +307,7 @@
                 <div class="glow-bg"></div>
                 <div class="interactive-layer" id="parallax-scene">
                     <div class="main-dish-wrapper" data-depth="0.2">
-                        <img src="bacanaklarlokanta.png" alt="Sıcak çorba ve Bacanaklar Lokantası sunumu" class="main-dish" decoding="async" fetchpriority="high">
+                        <img src="assets/images/bacanaklarlokanta.webp" alt="Sıcak çorba ve Bacanaklar Lokantası sunumu" class="main-dish" decoding="async" fetchpriority="high" width="1200" height="631">
                         <div class="steam-container" id="steam-zone"></div>
                     </div>
                     <div class="floating-item pepper" data-depth="0.5">🌶️</div>
@@ -333,7 +336,7 @@
             <!-- 3D TILT EKLENMİŞ KARTLAR -->
             <div class="menu-card reveal delay-1" data-tilt data-tilt-glare data-tilt-max-glare="0.3" data-tilt-max="15">
                 <div class="card-img-container anim-zoom-pan">
-                    <img src="kellepaca.png" alt="Kelle Paça Çorbası" loading="lazy" decoding="async">
+                    <img src="assets/images/kellepaca.webp" alt="Kelle Paça Çorbası" loading="lazy" decoding="async" width="893" height="564">
                     <span class="card-badge">Çorba</span>
                 </div>
                 <div class="card-info">
@@ -347,7 +350,7 @@
 
             <div class="menu-card reveal delay-2" data-tilt data-tilt-glare data-tilt-max-glare="0.3" data-tilt-max="15">
                 <div class="card-img-container anim-zoom-pan">
-                    <img src="ayakpaca.png" alt="Ayak Paça" loading="lazy" decoding="async">
+                    <img src="assets/images/ayakpaca.webp" alt="Ayak Paça" loading="lazy" decoding="async" width="852" height="492">
                     <span class="card-badge">Ev Yemeği</span>
                 </div>
                 <div class="card-info">
@@ -361,7 +364,7 @@
 
             <div class="menu-card reveal delay-3" data-tilt data-tilt-glare data-tilt-max-glare="0.3" data-tilt-max="15">
                 <div class="card-img-container anim-zoom-pan">
-                    <img src="tandircorbasi.png" alt="Tandır Çorbası" loading="lazy" decoding="async">
+                    <img src="assets/images/tandircorbasi.webp" alt="Tandır Çorbası" loading="lazy" decoding="async" width="679" height="360">
                     <span class="card-badge">Çorba</span>
                 </div>
                 <div class="card-info">
@@ -415,10 +418,10 @@
             <div class="about-gallery">
                 <div class="gallery-wrapper">
                     <div class="img-box box-1 reveal delay-1 anim-zoom-pan">
-                        <img src="karahisar.jpg" alt="Karahisar Kalesi" loading="lazy" decoding="async">
+                        <img src="assets/images/karahisar.webp" alt="Karahisar Kalesi" loading="lazy" decoding="async" width="540" height="360">
                     </div>
                     <div class="img-box box-2 reveal delay-3 anim-zoom-pan">
-                        <img src="akarcay.jpg" alt="Akarçay" loading="lazy" decoding="async">
+                        <img src="assets/images/akarcay.jpg" alt="Akarçay" loading="lazy" decoding="async" width="1000" height="750">
                     </div>
                     <div class="deco-circle reveal delay-2 anim-spin-slow"></div>
                 </div>
@@ -434,28 +437,28 @@
             <p class="section-subtitle">Bacanaklar'ın çorbalarından ev yemeklerine, menümüzden seçtiğimiz lezzet kareleri.</p>
         </div>
         <div class="story-gallery-grid">
-            <button class="story-shot story-shot-large reveal" type="button" data-gallery-src="bacanal.png" data-gallery-alt="Bacanaklar Lokantası ve mekan görünümü">
-                <img src="bacanal.png" alt="Bacanaklar Lokantası ve mekan görünümü" loading="lazy" decoding="async">
+            <button class="story-shot story-shot-large reveal" type="button" data-gallery-src="assets/images/bacanal.webp" data-gallery-alt="Bacanaklar Lokantası ve mekan görünümü">
+                <img src="assets/images/bacanal.webp" alt="Bacanaklar Lokantası ve mekan görünümü" loading="lazy" decoding="async" width="840" height="450">
                 <span class="story-shot-label"><small>Bacanaklar</small><strong>Lezzet durağımız</strong></span>
             </button>
-            <button class="story-shot reveal delay-1" type="button" data-gallery-src="kellepaca.png" data-gallery-alt="Kelle paça çorbası">
-                <img src="kellepaca.png" alt="Kelle paça çorbası" loading="lazy" decoding="async">
+            <button class="story-shot reveal delay-1" type="button" data-gallery-src="assets/images/kellepaca.webp" data-gallery-alt="Kelle paça çorbası">
+                <img src="assets/images/kellepaca.webp" alt="Kelle paça çorbası" loading="lazy" decoding="async" width="893" height="564">
                 <span class="story-shot-label"><small>Çorba</small><strong>Kelle Paça</strong></span>
             </button>
-            <button class="story-shot reveal delay-2" type="button" data-gallery-src="tandircorbasi.png" data-gallery-alt="Tandır çorbası">
-                <img src="tandircorbasi.png" alt="Tandır çorbası" loading="lazy" decoding="async">
+            <button class="story-shot reveal delay-2" type="button" data-gallery-src="assets/images/tandircorbasi.webp" data-gallery-alt="Tandır çorbası">
+                <img src="assets/images/tandircorbasi.webp" alt="Tandır çorbası" loading="lazy" decoding="async" width="679" height="360">
                 <span class="story-shot-label"><small>Çorba</small><strong>Tandır</strong></span>
             </button>
-            <button class="story-shot reveal delay-1" type="button" data-gallery-src="danatandir.png" data-gallery-alt="Dana tandır yemeği">
-                <img src="danatandir.png" alt="Dana tandır yemeği" loading="lazy" decoding="async">
+            <button class="story-shot reveal delay-1" type="button" data-gallery-src="assets/images/danatandir.webp" data-gallery-alt="Dana tandır yemeği">
+                <img src="assets/images/danatandir.webp" alt="Dana tandır yemeği" loading="lazy" decoding="async" width="901" height="569">
                 <span class="story-shot-label"><small>Ev Yemeği</small><strong>Dana Tandır</strong></span>
             </button>
-            <button class="story-shot reveal delay-2" type="button" data-gallery-src="karniyarik.png" data-gallery-alt="Patlıcan karnıyarık">
-                <img src="karniyarik.png" alt="Patlıcan karnıyarık" loading="lazy" decoding="async">
+            <button class="story-shot reveal delay-2" type="button" data-gallery-src="assets/images/karniyarik.webp" data-gallery-alt="Patlıcan karnıyarık">
+                <img src="assets/images/karniyarik.webp" alt="Patlıcan karnıyarık" loading="lazy" decoding="async" width="816" height="549">
                 <span class="story-shot-label"><small>Ev Yemeği</small><strong>Karnıyarık</strong></span>
             </button>
-            <button class="story-shot reveal delay-3" type="button" data-gallery-src="sutlac.png" data-gallery-alt="Fırın sütlaç tatlısı">
-                <img src="sutlac.png" alt="Fırın sütlaç tatlısı" loading="lazy" decoding="async">
+            <button class="story-shot reveal delay-3" type="button" data-gallery-src="assets/images/sutlac.webp" data-gallery-alt="Fırın sütlaç tatlısı">
+                <img src="assets/images/sutlac.webp" alt="Fırın sütlaç tatlısı" loading="lazy" decoding="async" width="582" height="558">
                 <span class="story-shot-label"><small>Tatlı</small><strong>Fırın Sütlaç</strong></span>
             </button>
         </div>
@@ -508,9 +511,9 @@
                 </a>
             </div>
             <div class="instagram-mosaic" aria-hidden="true">
-                <div class="instagram-tile tile-a"><img src="iskembe.png" alt="" loading="lazy" decoding="async"></div>
-                <div class="instagram-tile tile-b"><img src="danakavurma.png" alt="" loading="lazy" decoding="async"></div>
-                <div class="instagram-tile tile-c"><img src="burmak.png" alt="" loading="lazy" decoding="async"></div>
+                <div class="instagram-tile tile-a"><img src="assets/images/iskembe.webp" alt="" loading="lazy" decoding="async" width="667" height="358"></div>
+                <div class="instagram-tile tile-b"><img src="assets/images/danakavurma.webp" alt="" loading="lazy" decoding="async" width="801" height="581"></div>
+                <div class="instagram-tile tile-c"><img src="assets/images/burmak.webp" alt="" loading="lazy" decoding="async" width="812" height="531"></div>
             </div>
         </div>
     </section>

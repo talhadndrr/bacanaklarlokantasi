@@ -1,0 +1,33 @@
+BACANAKLAR LOKANTASI - V6 PERFORMANS RAPORU
+
+1) GORSEL OPTIMIZASYONU
+- Mevcut 25 ana görselin toplam boyutu: 15.34 MB
+- V6 optimize edilmiş karşılıkları: 1.24 MB
+- Yaklaşık tasarruf: %91.9
+- Menü ve galeri görsellerinin büyük bölümü WebP formatına çevrildi.
+- Zaten küçük olan Akarçay JPEG dosyası WebP'den daha küçük olduğu için JPEG olarak korundu.
+- Aşırı büyük logo görselinin sayfa içi sürümü 1200 px genişliğe küçültüldü ve WebP yapıldı.
+- Sosyal paylaşım için ayrı optimize PNG, favicon için ayrı 256px PNG üretildi.
+
+2) CLS / YERLESIM KARARLILIGI
+- Yerel <img> etiketlerine width ve height eklendi.
+- Bu sayede görsel yüklenmeden önce tarayıcı alanı ayırabilir.
+
+3) LCP / ILK EKRAN
+- Ana hero görseline fetchpriority=high korunarak optimize WebP bağlandı.
+- Hero görseli için preload eklendi.
+- Typed.js ve VanillaTilt scriptleri defer ile yükleniyor.
+- CDN bağlantılarına preconnect eklendi.
+
+4) ASAGIDAKI ICERIKLER
+- Uygun tarayıcılarda content-visibility:auto ile aşağıdaki büyük bölümlerin ilk render maliyeti azaltıldı.
+- Menü resimlerinde lazy loading korunuyor.
+
+5) KOD KONTROLLERI
+- script.js Node sözdizimi kontrolünden geçti.
+- HTML dosyalarında duplicate id bulunmadı.
+- Optimize görsel referanslarında eksik dosya bulunmadı.
+- CSS küme parantezleri dengeli.
+
+NOT
+Bu bir statik/kod tabanlı ön optimizasyon raporudur. En doğru Core Web Vitals / Lighthouse sonucu V6 Vercel'e deploy edildikten sonra canlı URL üzerinde alınmalıdır.

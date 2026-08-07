@@ -1,0 +1,14 @@
+DOMAIN + GOOGLE SONRAKI ADIMLAR
+
+A) OZEL DOMAIN
+Hedef: bacanaklarlokantasi.com gibi bir alan adı.
+Alan adını satın aldıktan sonra Vercel projesinde Settings > Domains bölümünden alan adını ekle. Vercel gerekli DNS kayıtlarını gösterecek. Domain bağlandıktan sonra canonical, sitemap, robots ve structured data URL'lerini yeni domaine çevireceğiz.
+
+B) GOOGLE SEARCH CONSOLE
+Custom domain bağlandıktan sonra Domain property kullanmak en temiz yöntemdir. Domain property DNS kaydıyla doğrulanır. Sitemap olarak /sitemap.xml gönderilir.
+
+C) GOOGLE ANALYTICS 4
+GA4'te Bacanaklar Lokantası için bir property ve Web data stream oluştur. Bana sadece G- ile başlayan Measurement ID'yi verdiğinde etiketi bütün HTML sayfalarına doğru şekilde ekleyebilirim.
+
+D) FINAL TEST
+V6 + domain + Analytics yayınlandıktan sonra canlı site için son SEO/performance kontrolü yapılacak.

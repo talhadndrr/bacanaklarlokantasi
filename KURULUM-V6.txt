@@ -1,0 +1,20 @@
+BACANAKLAR V6 - KURULUM
+
+Bu paket V5/V5.1 tasarımını korur ve performans odaklı değişiklikler ekler.
+
+1. ZIP'i Masaüstüne çıkar.
+2. İçindeki bacanaklar-v6 klasörünün ICINDEKI dosya ve klasörleri şu klasöre kopyala:
+   C:\Users\TlhaD\OneDrive\Masaüstü\bacanaklarlokantasi-git
+3. Dosya değiştirme sorarsa kabul et. Yeni assets klasörü de kopyalanmalıdır.
+
+PowerShell:
+cd "$HOME\OneDrive\Masaüstü\bacanaklarlokantasi-git"
+git status
+git add .
+git commit -m "Bacanaklar V6 performans ve gorsel optimizasyonu"
+git push origin main
+
+Vercel deployment Ready olduktan sonra siteyi Ctrl+F5 ile yenile.
+
+ESKI PNG/JPEG DOSYALARINI SIMDI SILMEK ZORUNDA DEGILSIN.
+HTML artık assets/images altındaki optimize dosyaları kullanır. Eski dosyaların repoda kalması ziyaretçinin sayfa yükünü artırmaz.
