@@ -1840,3 +1840,47 @@ body.lightbox-open { overflow: hidden; }
     .gallery-lightbox { padding: 18px; }
     .gallery-lightbox-close { top: 14px; right: 14px; }
 }
+
+/* =========================================================
+   V5.1.1 - MOBIL ALT BAR STABILITE DUZELTMESI
+   ========================================================= */
+@media (max-width: 768px) {
+
+    body {
+        padding-bottom: calc(78px + env(safe-area-inset-bottom));
+    }
+
+    .mobile-action-bar {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        z-index: 9998;
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 6px;
+
+        padding:
+            7px
+            8px
+            calc(7px + env(safe-area-inset-bottom));
+
+        border-radius: 18px 18px 0 0;
+
+        background: #080808;
+
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+
+        border: none;
+        border-top: 1px solid rgba(255,255,255,0.09);
+
+        box-shadow: 0 -8px 30px rgba(0,0,0,0.45);
+
+        transform: translateZ(0);
+        -webkit-transform: translateZ(0);
+    }
+}
+
