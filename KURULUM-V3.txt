@@ -1,0 +1,25 @@
+BACANAKLAR LOKANTASI V3 - KURULUM
+==================================
+
+1) Bu paketteki dosyaları şu klasördeki dosyaların üzerine kopyalayın:
+   C:\Users\TlhaD\OneDrive\Masaüstü\bacanaklarlokantasi-git
+
+2) Görsel dosyalarınızı silmeyin. Paket mevcut görsel adlarını kullanmaya devam eder.
+
+3) PowerShell'de:
+   cd "$HOME\OneDrive\Masaüstü\bacanaklarlokantasi-git"
+   git status
+   git add .
+   git commit -m "Bacanaklar V3 SEO footer ve iletisim guncellemesi"
+   git push origin main
+
+4) Vercel deployment Ready olduktan sonra kontrol edin:
+   https://bacanaklarlokantasi.vercel.app/
+   https://bacanaklarlokantasi.vercel.app/sitemap.xml
+   https://bacanaklarlokantasi.vercel.app/robots.txt
+
+5) İLETİŞİM FORMU İÇİN TEK SEFERLİK İŞLEM:
+   Canlı sitedeki iletişim formundan bir test mesajı gönderin.
+   info@bacanaklarlokantasi.com adresine FormSubmit aktivasyon e-postası gelecektir.
+   Aktivasyon bağlantısına bir kez tıklayın.
+   Sonraki form mesajları bu e-posta adresine ulaşacaktır.

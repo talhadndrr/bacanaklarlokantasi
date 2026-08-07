@@ -1,0 +1,28 @@
+BACANAKLAR LOKANTASI V4 — KURULUM
+
+Bu paket V3'teki SEO/footer değişikliklerini de içerir. V3 canlıya geçmediyse doğrudan V4 dosyalarını kullanabilirsin.
+
+1) ZIP içindeki dosyaları bacanaklarlokantasi-git klasörüne kopyala.
+2) Mevcut yemek/görsel dosyalarını SILME.
+3) PowerShell:
+
+cd "$HOME\OneDrive\Masaüstü\bacanaklarlokantasi-git"
+git status
+git add .
+git commit -m "Bacanaklar V4 menu arama durum ve kullanilabilirlik"
+git push origin main
+
+V4 YENILIKLERI
+- V3'te eksik kalan açık/kapalı JavaScript motoru tamamlandı.
+- Durum Europe/Istanbul saatine göre hesaplanır.
+- Ortak footer'ın eksik CSS'i tamamlandı.
+- İletişim formunun FormSubmit gönderimini engelleyen eski mailto JS kaldırıldı.
+- Menüye yemek adına/açıklamasına göre canlı arama eklendi.
+- Arama kategori filtreleriyle birlikte çalışır.
+- Sonuç sayacı ve sonuç yok durumu eklendi.
+- Ana sayfaya Gelmeden Önce ve Sık Sorulanlar bölümü eklendi.
+- Harita/yorum görüntüleme CTA'sı eklendi; değişebilecek puanlar siteye sabit yazılmadı.
+- Typed.js ve Vanilla Tilt scriptleri defer ile yüklenir.
+- Klavye focus görünürlüğü iyileştirildi.
+
+NOT: info@bacanaklarlokantasi.com adresi gerçek olmadığı için iletişim formu e-posta kısmı daha sonra gerçek adresle değiştirilmelidir.

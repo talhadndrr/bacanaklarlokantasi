@@ -1,20 +1,18 @@
-BACANAKLAR LOKANTASI - V2 İLK İYİLEŞTİRME PAKETİ
+BACANAKLAR LOKANTASI V3 - 2. GELİŞTİRME PAKETİ
 
-- Ana sayfadaki iki ayrı preloader sistemi tek motorda birleştirildi.
-- Preloader ilk ziyarette kısaltıldı, aynı sekmedeki sonraki ziyarette neredeyse atlanıyor.
-- Mobil hamburger menü eklendi.
-- Mobilde sabit Ara / WhatsApp / Yol Tarifi çubuğu eklendi.
-- Ana sayfadaki Hakkımızda butonu Hemen Ara olarak değiştirildi.
-- İletişim kartları telefon, e-posta ve Instagram için tıklanabilir hale getirildi.
-- Sahte başarı mesajı kaldırıldı; form şimdilik e-posta uygulamasını açıyor.
-- Ulaşım sayfasına tek dokunuşla navigasyon kartı eklendi.
-- Menü ve aşağıdaki görsellerde lazy loading / async decoding eklendi.
-- Tandır Çorbası alt metni düzeltildi.
-- Pazar çalışma saati yanlışlıkla 'kapalı' gibi kırmızı görünüyordu; düzeltildi.
-- reveal delay-3 CSS eksikliği giderildi.
-- Crosshair imleç kaldırıldı.
-- prefers-reduced-motion desteği eklendi.
-- Buhar/kıvılcım üretimi azaltıldı ve görünmeyen sekmede gereksiz üretim engellendi.
-- target=_blank bağlantılarına güvenli rel özellikleri eklendi.
+- Tüm sayfalara benzersiz SEO title ve meta description eklendi.
+- Canonical, Open Graph ve Twitter paylaşım etiketleri eklendi.
+- Restaurant JSON-LD yapılandırılmış verisi eklendi.
+- robots.txt ve sitemap.xml eklendi.
+- Mevcut lokanta görseli favicon/apple-touch-icon olarak bağlandı.
+- Açık/kapalı durumu Europe/Istanbul saat diliminde gerçek zamanlı hesaplanıyor.
+- Gece 00:00 sonrası devam eden çalışma saatleri doğru hesaplanıyor.
+- Tüm sayfalarda aynı profesyonel footer kullanılıyor.
+- Footer'a hızlı linkler, telefon, e-posta, WhatsApp ve yol tarifi eklendi.
+- İletişim formu FormSubmit ile gerçek e-posta gönderimine bağlandı.
+- Spam botlarına karşı honeypot alanı eklendi.
+- Form gönderimi sonrası başarı mesajı eklendi.
 
-NOT: Gerçek sunucu tarafı iletişim formu, SEO/Schema, sitemap/robots ve Google yorumları ikinci pakete bırakıldı.
+ÖNEMLİ FORM NOTU:
+FormSubmit ilk form gönderiminde info@bacanaklarlokantasi.com adresine aktivasyon e-postası gönderir.
+Bu e-postadaki onay bağlantısına bir kez tıklanmalıdır. Sonraki mesajlar doğrudan e-posta kutusuna gelir.

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bacanaklarlokantasi.vercel.app/sitemap.xml

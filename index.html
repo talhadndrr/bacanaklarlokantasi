@@ -3,7 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bacanaklar | Ev Yemekleri & Çorba</title>
+    <title>Bacanaklar Lokantası | Afyonkarahisar Ev Yemekleri &amp; Çorba</title>
+    <!-- BACANAKLAR SEO START -->
+    <meta name="description" content="Afyonkarahisar&#x27;da kelle paça, işkembe, tandır çorbası ve günlük ev yemekleri. Bacanaklar Lokantası Park Afyon karşısında, sıcak ve taze lezzetlerle hizmetinizde.">
+    <meta name="robots" content="index,follow,max-image-preview:large">
+    <meta name="theme-color" content="#050505">
+    <link rel="canonical" href="https://bacanaklarlokantasi.vercel.app/">
+    <link rel="icon" type="image/png" href="/bacanaklarlokanta.png">
+    <link rel="apple-touch-icon" href="/bacanaklarlokanta.png">
+
+    <meta property="og:locale" content="tr_TR">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Bacanaklar Lokantası">
+    <meta property="og:title" content="Bacanaklar Lokantası | Afyonkarahisar Ev Yemekleri &amp; Çorba">
+    <meta property="og:description" content="Afyonkarahisar&#x27;da kelle paça, işkembe, tandır çorbası ve günlük ev yemekleri. Bacanaklar Lokantası Park Afyon karşısında, sıcak ve taze lezzetlerle hizmetinizde.">
+    <meta property="og:url" content="https://bacanaklarlokantasi.vercel.app/">
+    <meta property="og:image" content="https://bacanaklarlokantasi.vercel.app/bacanaklarlokanta.png">
+    <meta property="og:image:alt" content="Bacanaklar Lokantası geleneksel lezzetleri">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Bacanaklar Lokantası | Afyonkarahisar Ev Yemekleri &amp; Çorba">
+    <meta name="twitter:description" content="Afyonkarahisar&#x27;da kelle paça, işkembe, tandır çorbası ve günlük ev yemekleri. Bacanaklar Lokantası Park Afyon karşısında, sıcak ve taze lezzetlerle hizmetinizde.">
+    <meta name="twitter:image" content="https://bacanaklarlokantasi.vercel.app/bacanaklarlokanta.png">
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "@id": "https://bacanaklarlokantasi.vercel.app/#restaurant",
+  "name": "Bacanaklar Lokantası",
+  "url": "https://bacanaklarlokantasi.vercel.app/",
+  "telephone": "+90 551 220 42 02",
+  "email": "info@bacanaklarlokantasi.com",
+  "image": [
+    "https://bacanaklarlokantasi.vercel.app/bacanaklarlokanta.png",
+    "https://bacanaklarlokantasi.vercel.app/kellepaca.png"
+  ],
+  "logo": "https://bacanaklarlokantasi.vercel.app/bacanaklarlokanta.png",
+  "priceRange": "₺₺",
+  "servesCuisine": [
+    "Türk Mutfağı",
+    "Ev Yemekleri",
+    "Çorba"
+  ],
+  "menu": "https://bacanaklarlokantasi.vercel.app/menu.html",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Cumhuriyet, İsmet İnönü Cd. 57/A",
+    "postalCode": "03100",
+    "addressLocality": "Afyonkarahisar Merkez",
+    "addressRegion": "Afyonkarahisar",
+    "addressCountry": "TR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 38.7551238,
+    "longitude": 30.5512127
+  },
+  "hasMap": "https://www.google.com/maps/place/Bacanaklar+lokantas%C4%B1/@38.7551238,30.5512127,17z/",
+  "sameAs": [
+    "https://www.instagram.com/bacanaklarlokantasi/"
+  ],
+  "openingHours": [
+    "Mo-Sa 08:00-04:00",
+    "Su 19:00-03:00"
+  ]
+}
+    </script>
+    <!-- BACANAKLAR SEO END -->
+
     
     <!-- Dış Bağlantılar ve Fontlar -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,8 +80,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- Animasyon Kütüphaneleri (Daktilo ve 3D Kartlar) -->
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js" defer></script>
 
     <link rel="stylesheet" href="style.css">
     
@@ -210,6 +278,11 @@
                 <p class="hero-desc animate-fade-up delay-2">
                     Anne eli değmiş gibi doğal, en taze malzemelerle her sabah sevgiyle kaynayan çorbalar ve içinizi ısıtacak ev yemekleri. Lezzet şölenine davetlisiniz.
                 </p>
+
+                <div class="restaurant-status hero-status animate-fade-up delay-2" data-restaurant-status aria-live="polite">
+                    <span class="status-dot" aria-hidden="true"></span>
+                    <span class="status-text">Çalışma durumu hesaplanıyor…</span>
+                </div>
                 
                 <div class="hero-actions animate-fade-up delay-3">
                     <a href="menu.html" class="btn btn-primary anim-pulse-button" style="text-decoration: none;">
@@ -347,20 +420,96 @@
         </div>
     </section>
 
+
+    <!-- GELMEDEN ÖNCE / GÜVEN & HIZLI ERİŞİM -->
+    <section class="visitor-tools-section" aria-labelledby="visitor-tools-title">
+        <div class="visitor-tools-header reveal">
+            <span class="section-kicker">Gelmeden Önce</span>
+            <h2 class="section-title" id="visitor-tools-title">Aradığınız Bilgi <span>Tek Yerde</span></h2>
+            <p class="section-subtitle">Menüden konuma, çalışma saatlerinden iletişime kadar en çok ihtiyaç duyulan bilgiler.</p>
+        </div>
+
+        <div class="visitor-tools-grid">
+            <article class="visitor-tool-card reveal delay-1">
+                <div class="visitor-tool-icon"><i class="fa-solid fa-utensils"></i></div>
+                <h3>Bugün ne yiyelim?</h3>
+                <p>Çorbalar, ev yemekleri ve tatlıları tek sayfada inceleyin; menü içinde yemek adına göre arama yapın.</p>
+                <a href="menu.html" class="visitor-tool-link">Menüyü aç <i class="fa-solid fa-arrow-right"></i></a>
+            </article>
+
+            <article class="visitor-tool-card reveal delay-2">
+                <div class="visitor-tool-icon"><i class="fa-solid fa-location-dot"></i></div>
+                <h3>Park Afyon karşısındayız</h3>
+                <p>Cumhuriyet Mahallesi, İsmet İnönü Caddesi 57/A adresindeki lokantamıza tek dokunuşla rota oluşturun.</p>
+                <a href="https://www.google.com/maps/dir/?api=1&destination=Bacanaklar%20Lokantas%C4%B1%2C%20Afyonkarahisar" target="_blank" rel="noopener noreferrer" class="visitor-tool-link">Yol tarifi al <i class="fa-solid fa-location-arrow"></i></a>
+            </article>
+
+            <article class="visitor-tool-card reveal delay-3">
+                <div class="visitor-tool-icon"><i class="fa-solid fa-comments"></i></div>
+                <h3>Deneyimleri inceleyin</h3>
+                <p>Gelmeden önce harita üzerindeki işletme kaydını ve ziyaretçi değerlendirmelerini görüntüleyebilirsiniz.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Bacanaklar%20Lokantas%C4%B1%2C%20Afyonkarahisar" target="_blank" rel="noopener noreferrer" class="visitor-tool-link">Haritalarda görüntüle <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </article>
+        </div>
+
+        <div class="faq-wrap reveal">
+            <div class="faq-heading">
+                <span class="section-kicker">Kısa Cevaplar</span>
+                <h2>Sık Sorulanlar</h2>
+            </div>
+            <div class="faq-grid">
+                <details class="faq-item">
+                    <summary>Nerede bulunuyorsunuz?</summary>
+                    <p>Afyonkarahisar Merkez'de, Park Afyon'un karşısında; Cumhuriyet, İsmet İnönü Cd. 57/A adresindeyiz.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Çalışma saatleriniz nedir?</summary>
+                    <p>Pazartesi-Cumartesi 08.00-04.00, Pazar 19.00-03.00 saatleri arasında hizmet veriyoruz.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Menüde neler var?</summary>
+                    <p>Kelle paça, işkembe ve tandır gibi çorbaların yanında günlük ev yemekleri ve geleneksel tatlılar bulunuyor.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Nasıl hızlıca ulaşabilirim?</summary>
+                    <p>Sayfanın altındaki Ara, WhatsApp ve Yol Tarifi düğmelerini kullanabilir veya iletişim sayfamızı açabilirsiniz.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
     <!-- FOOTER BÖLÜMÜ -->
+
     <footer class="site-footer" id="footer">
-        <div class="footer-container">
-            
-            <div class="footer-info reveal">
+        <div class="footer-container footer-container-v2">
+            <div class="footer-info">
                 <a href="index.html" class="logo">Bacanaklar<span>.</span></a>
-                <p class="footer-tagline" style="margin-top: 20px;">Her sabah aynı sevgiyle, taptaze ve sıcacık kaynayan lezzet ocağı.</p>
+                <p class="footer-tagline">Her gün taze hazırlanan çorbalar, ev yemekleri ve geleneksel lezzetler.</p>
+                <div class="restaurant-status footer-status" data-restaurant-status aria-live="polite">
+                    <span class="status-dot" aria-hidden="true"></span>
+                    <span class="status-text">Çalışma durumu hesaplanıyor…</span>
+                </div>
                 <div class="social-links">
-                    <a href="https://www.instagram.com/bacanaklarlokantasi/" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                    
+                    <a href="https://www.instagram.com/bacanaklarlokantasi/" target="_blank" rel="noopener noreferrer" aria-label="Bacanaklar Lokantası Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://wa.me/905512204202?text=Merhaba%20Bacanaklar%20Lokantas%C4%B1%2C%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener noreferrer" aria-label="Bacanaklar Lokantası WhatsApp">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
                 </div>
             </div>
 
-            <div class="footer-hours reveal delay-1">
+            <div class="footer-links">
+                <h3><i class="fa-solid fa-link"></i> Hızlı Erişim</h3>
+                <ul class="footer-link-list">
+                    <li><a href="index.html">Ana Sayfa</a></li>
+                    <li><a href="menu.html">Menü</a></li>
+                    <li><a href="ulasim.html">Ulaşım & Konum</a></li>
+                    <li><a href="iletisim.html">İletişim</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-hours">
                 <h3><i class="fa-solid fa-clock"></i> Çalışma Saatleri</h3>
                 <ul class="hours-list">
                     <li class="day-row" data-day="1"><span>Pazartesi</span> <span>08.00 - 04.00</span></li>
@@ -368,34 +517,30 @@
                     <li class="day-row" data-day="3"><span>Çarşamba</span> <span>08.00 - 04.00</span></li>
                     <li class="day-row" data-day="4"><span>Perşembe</span> <span>08.00 - 04.00</span></li>
                     <li class="day-row" data-day="5"><span>Cuma</span> <span>08.00 - 04.00</span></li>
-                    <li class="day-row" data-day="6"><span>Cumartesi</span> <span>08:00 - 04.00</span></li>
+                    <li class="day-row" data-day="6"><span>Cumartesi</span> <span>08.00 - 04.00</span></li>
                     <li class="day-row" data-day="0"><span>Pazar</span> <span>19.00 - 03.00</span></li>
                 </ul>
             </div>
 
-            <div class="footer-contact reveal delay-2">
-                <h3><i class="fa-solid fa-map-location-dot"></i> Ulaşım Bilgileri</h3>
+            <div class="footer-contact">
+                <h3><i class="fa-solid fa-location-dot"></i> Bize Ulaşın</h3>
                 <p class="address-text">Cumhuriyet, İsmet İnönü Cd. 57/A, 03100 Afyonkarahisar Merkez/Afyonkarahisar</p>
-                
-                <div class="map-wrapper">
-                    <iframe 
-                        src="https://maps.google.com/maps?q=Bacanaklar%20lokantas%C4%B1,%20Afyonkarahisar&t=&z=16&ie=UTF8&iwloc=&output=embed" 
-                        width="100%" 
-                        height="220" 
-                        style="border:0;" 
-                        allowfullscreen="" 
-                        loading="lazy" 
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
-                    <a href="https://www.google.com/maps/search/?api=1&query=Bacanaklar%20Lokantas%C4%B1%2C%20Afyonkarahisar" target="_blank" rel="noopener noreferrer">
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Haritalar'da aç
+                <ul class="footer-contact-list">
+                    <li><a href="tel:+905512204202"><i class="fa-solid fa-phone"></i> 0551 220 42 02</a></li>
+                    <li><a href="mailto:info@bacanaklarlokantasi.com"><i class="fa-solid fa-envelope"></i> info@bacanaklarlokantasi.com</a></li>
+                </ul>
+                <div class="footer-cta-row">
+                    <a class="footer-mini-btn" href="https://www.google.com/maps/dir/?api=1&destination=Bacanaklar%20Lokantas%C4%B1%2C%20Afyonkarahisar" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-solid fa-location-arrow"></i> Yol Tarifi
+                    </a>
+                    <a class="footer-mini-btn" href="tel:+905512204202">
+                        <i class="fa-solid fa-phone"></i> Hemen Ara
                     </a>
                 </div>
             </div>
-
         </div>
-        
-        <div class="footer-bottom reveal delay-3">
+
+        <div class="footer-bottom">
             <p>© 2026 Bacanaklar Lokantası. Tasarım ve Kodlama: Talha Dündar.</p>
         </div>
     </footer>
