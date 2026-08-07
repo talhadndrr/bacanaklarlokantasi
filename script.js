@@ -235,6 +235,43 @@ document.addEventListener("DOMContentLoaded", () => {
         setInterval(updateRestaurantStatus, 60 * 1000);
     }
 
+    // --- V5 GALERİ LIGHTBOX ---
+    const galleryLightbox = document.getElementById("gallery-lightbox");
+    const galleryLightboxImg = galleryLightbox?.querySelector("img");
+    const galleryClose = galleryLightbox?.querySelector(".gallery-lightbox-close");
+    let galleryReturnFocus = null;
+
+    function closeGalleryLightbox() {
+        if (!galleryLightbox) return;
+        galleryLightbox.hidden = true;
+        document.body.classList.remove("lightbox-open");
+        if (galleryLightboxImg) {
+            galleryLightboxImg.src = "";
+            galleryLightboxImg.alt = "";
+        }
+        galleryReturnFocus?.focus?.();
+        galleryReturnFocus = null;
+    }
+
+    document.querySelectorAll("[data-gallery-src]").forEach(button => {
+        button.addEventListener("click", () => {
+            if (!galleryLightbox || !galleryLightboxImg) return;
+            galleryReturnFocus = button;
+            galleryLightboxImg.src = button.dataset.gallerySrc || "";
+            galleryLightboxImg.alt = button.dataset.galleryAlt || "Galeri görseli";
+            galleryLightbox.hidden = false;
+            document.body.classList.add("lightbox-open");
+            galleryClose?.focus();
+        });
+    });
+    galleryClose?.addEventListener("click", closeGalleryLightbox);
+    galleryLightbox?.addEventListener("click", event => {
+        if (event.target === galleryLightbox) closeGalleryLightbox();
+    });
+    document.addEventListener("keydown", event => {
+        if (event.key === "Escape" && galleryLightbox && !galleryLightbox.hidden) closeGalleryLightbox();
+    });
+
     // FormSubmit kullanan iletişim formunu JavaScript ile engellemiyoruz.
 
     document.addEventListener("visibilitychange", () => {

@@ -1,0 +1,10 @@
+BACANAKLAR V5 DEĞİŞİKLİKLERİ
+
+- index.html: Hero güven şeridi eklendi.
+- index.html: Mutfaktan Kareler galerisi eklendi.
+- index.html: 4,2/5 ve 83 değerlendirme sosyal kanıt kartı eklendi.
+- index.html: Instagram tanıtım alanı eklendi.
+- index.html: V4'teki Gelmeden Önce ve Sık Sorulanlar bölümleri pakete dahil edildi.
+- style.css: V5 galeri, sosyal kanıt, Instagram ve responsive stilleri eklendi.
+- script.js: Galeri lightbox aç/kapat, Escape tuşu ve focus dönüşü eklendi.
+- V4 menü araması, açık/kapalı hesaplaması, ortak footer ve mobil aksiyon çubuğu korunur.

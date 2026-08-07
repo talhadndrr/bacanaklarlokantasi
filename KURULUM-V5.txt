@@ -1,0 +1,38 @@
+BACANAKLAR LOKANTASI — V5 KURULUM
+==================================
+
+1) Bu klasörün içindeki dosyaları GitHub'a bağlı proje klasörüne kopyalayın:
+   C:\Users\TlhaD\OneDrive\Masaüstü\bacanaklarlokantasi-git
+
+2) Mevcut yemek ve mekan görsellerini SİLMEYİN.
+   V5 şu mevcut görselleri kullanır: bacanal.png, kellepaca.png, tandircorbasi.png,
+   danatandir.png, karniyarik.png, sutlac.png, iskembe.png, danakavurma.png, burmak.png.
+
+3) PowerShell:
+   cd "$HOME\OneDrive\Masaüstü\bacanaklarlokantasi-git"
+   git status
+   git add .
+   git commit -m "Bacanaklar V5 premium galeri ve sosyal kanit"
+   git push origin main
+
+4) Vercel otomatik deploy edecektir. Deployments ekranında son deployment Ready olunca
+   https://bacanaklarlokantasi.vercel.app/ adresini Ctrl+F5 ile yenileyin.
+
+V5 YENİLİKLERİ
+---------------
+- Hero altında hızlı güven bilgileri
+- Mutfaktan Kareler premium fotoğraf galerisi
+- Tıklayınca büyüyen erişilebilir lightbox
+- Harita işletme kaydından doğrulanan 4,2/5 ve 83 değerlendirme sosyal kanıt alanı
+- Puanın doğrulama tarihi ve zamanla değişebileceği notu
+- Daha güçlü Google Maps değerlendirme CTA'sı
+- Instagram tanıtım / yönlendirme alanı
+- V4 Gelmeden Önce + Sık Sorulanlar bölümleri pakete dahil
+- V4 menü araması ve açık/kapalı sistemi korunur
+
+NOTLAR
+------
+- Telefon ve çalışma saatleri harita kaydında sitedekinden farklı göründüğü için V5 bunları
+  otomatik değiştirmez. Doğru işletme bilgisini teyit ettikten sonra ayrıca güncellenebilir.
+- info@bacanaklarlokantasi.com gerçek bir adres olmadığı için iletişim formu/e-posta konusu
+  ayrıca düzeltilmelidir.
