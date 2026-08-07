@@ -45,7 +45,7 @@ body {
     overflow-x: hidden;
     position: relative;
     /* Tüm sayfada geçerli imleç takipli ışık reveal motoru */
-    cursor: crosshair; 
+    cursor: default; 
 }
 
 /* ==========================================================================
@@ -171,6 +171,59 @@ body::after {
 
 .nav-links a:hover::after {
     width: 100%;
+}
+
+
+
+/* Mobil menü düğmesi */
+.nav-toggle {
+    display: none;
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.1);
+    background: rgba(15,15,15,0.85);
+    color: var(--text-main);
+    font-size: 20px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Mobil hızlı işlem çubuğu */
+.mobile-action-bar {
+    display: none;
+}
+
+.c-method-link, .u-card-action {
+    text-decoration: none;
+    color: inherit;
+}
+
+.c-method-link {
+    transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+}
+
+.c-method-link:hover {
+    transform: translateY(-3px);
+    border-color: rgba(255, 81, 0, 0.35);
+    background: rgba(25, 25, 25, 0.9);
+}
+
+.u-card-action {
+    cursor: pointer;
+}
+
+.form-note {
+    margin-top: 16px;
+    color: var(--text-muted);
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.form-note i {
+    color: var(--accent-yellow);
+    margin-right: 6px;
 }
 
 /* ==========================================================================
@@ -909,6 +962,7 @@ body::after {
 
 .reveal.delay-1 { transition-delay: 0.2s; }
 .reveal.delay-2 { transition-delay: 0.4s; }
+.reveal.delay-3 { transition-delay: 0.6s; }
 
 @keyframes pulseGlow {
     0% { transform: scale(1); opacity: 0.7; }
@@ -1244,23 +1298,64 @@ body::after {
 /* Küçük Telefonlar İçin Nokta Atışı Düzenlemeler (Max Genişlik: 768px) */
 @media (max-width: 768px) {
     
-    /* Navbar'ı Burger Menüsüz, Şık Bir Alta Alta Dizilime Çeviriyoruz */
+    /* Mobil navbar: logo + hamburger */
     .navbar {
-        flex-direction: column;
-        padding: 20px 5%;
-        gap: 15px;
-        background: linear-gradient(to bottom, rgba(0,0,0,0.95), rgba(0,0,0,0.8));
+        flex-direction: row;
+        padding: 16px 5%;
+        gap: 12px;
+        background: rgba(5,5,5,0.94);
+        backdrop-filter: blur(14px);
+        position: absolute;
+    }
+
+    .nav-toggle {
+        display: inline-flex;
+        position: relative;
+        z-index: 102;
     }
 
     .nav-links {
-        gap: 15px;
-        flex-wrap: wrap; /* Sığmazsa alt satıra geçsin */
-        justify-content: center;
+        position: absolute;
+        top: calc(100% + 8px);
+        left: 5%;
+        right: 5%;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        padding: 12px;
+        border-radius: 16px;
+        background: rgba(10,10,10,0.98);
+        border: 1px solid rgba(255,255,255,0.08);
+        box-shadow: 0 18px 45px rgba(0,0,0,0.45);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
+    }
+
+    .nav-links.open {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .nav-links li, .nav-links a {
+        width: 100%;
     }
 
     .nav-links a {
-        font-size: 14px;
-        padding: 5px 10px;
+        display: block;
+        font-size: 15px;
+        padding: 12px 14px;
+        border-radius: 10px;
+    }
+
+    .nav-links a:hover, .nav-links a.active {
+        background: rgba(255,81,0,0.1);
+    }
+
+    .nav-links a::after {
+        display: none;
     }
 
     /* Yazı Boyutlarını Küçült */
@@ -1305,5 +1400,76 @@ body::after {
     /* Sayfa İçi Boşlukları (Padding) Daralt */
     .featured-menu, .about-section, .ulasim-page-section, .contact-page-section {
         padding: 60px 5%;
+    }
+}
+
+/* ==========================================================================
+   13. MOBİL HIZLI İŞLEMLER & HAREKET AZALTMA
+   ========================================================================== */
+@media (max-width: 768px) {
+    body {
+        padding-bottom: 74px;
+    }
+
+    .mobile-action-bar {
+        position: fixed;
+        left: 10px;
+        right: 10px;
+        bottom: max(10px, env(safe-area-inset-bottom));
+        z-index: 9998;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 6px;
+        padding: 7px;
+        border-radius: 18px;
+        background: rgba(8,8,8,0.94);
+        border: 1px solid rgba(255,255,255,0.09);
+        backdrop-filter: blur(16px);
+        box-shadow: 0 18px 45px rgba(0,0,0,0.55);
+    }
+
+    .mobile-action {
+        min-height: 52px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 3px;
+        border-radius: 12px;
+        color: #fff;
+        text-decoration: none;
+        font-size: 11px;
+        font-weight: 600;
+        background: rgba(255,255,255,0.035);
+    }
+
+    .mobile-action i {
+        color: var(--accent-yellow);
+        font-size: 17px;
+    }
+
+    .mobile-action:nth-child(2) i {
+        color: #25D366;
+    }
+
+    .hero-actions {
+        flex-wrap: wrap;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .reveal, .animate-fade-up {
+        opacity: 1 !important;
+        transform: none !important;
     }
 }

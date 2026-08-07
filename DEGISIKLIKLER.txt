@@ -1,0 +1,20 @@
+BACANAKLAR LOKANTASI - V2 İLK İYİLEŞTİRME PAKETİ
+
+- Ana sayfadaki iki ayrı preloader sistemi tek motorda birleştirildi.
+- Preloader ilk ziyarette kısaltıldı, aynı sekmedeki sonraki ziyarette neredeyse atlanıyor.
+- Mobil hamburger menü eklendi.
+- Mobilde sabit Ara / WhatsApp / Yol Tarifi çubuğu eklendi.
+- Ana sayfadaki Hakkımızda butonu Hemen Ara olarak değiştirildi.
+- İletişim kartları telefon, e-posta ve Instagram için tıklanabilir hale getirildi.
+- Sahte başarı mesajı kaldırıldı; form şimdilik e-posta uygulamasını açıyor.
+- Ulaşım sayfasına tek dokunuşla navigasyon kartı eklendi.
+- Menü ve aşağıdaki görsellerde lazy loading / async decoding eklendi.
+- Tandır Çorbası alt metni düzeltildi.
+- Pazar çalışma saati yanlışlıkla 'kapalı' gibi kırmızı görünüyordu; düzeltildi.
+- reveal delay-3 CSS eksikliği giderildi.
+- Crosshair imleç kaldırıldı.
+- prefers-reduced-motion desteği eklendi.
+- Buhar/kıvılcım üretimi azaltıldı ve görünmeyen sekmede gereksiz üretim engellendi.
+- target=_blank bağlantılarına güvenli rel özellikleri eklendi.
+
+NOT: Gerçek sunucu tarafı iletişim formu, SEO/Schema, sitemap/robots ve Google yorumları ikinci pakete bırakıldı.

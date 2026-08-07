@@ -14,6 +14,10 @@
 
     <nav class="navbar">
         <a href="index.html" class="logo">Bacanaklar<span>.</span></a>
+
+        <button class="nav-toggle" type="button" aria-label="Menüyü aç/kapat" aria-expanded="false">
+            <i class="fa-solid fa-bars"></i>
+        </button>
         <ul class="nav-links">
             <li><a href="index.html">Ana Sayfa</a></li>
             <li><a href="menu.html">Menü</a></li>
@@ -33,47 +37,48 @@
         <div class="contact-grid">
             
             <div class="contact-methods animate-fade-up delay-2">
-                <div class="c-method-box">
+                <a class="c-method-box c-method-link" href="tel:+905512204202">
                     <i class="fa-solid fa-phone"></i>
                     <div>
                         <h4>Telefon Numaramız</h4>
                         <p>0551 220 42 02</p>
                     </div>
-                </div>
-                <div class="c-method-box">
+                </a>
+                <a class="c-method-box c-method-link" href="mailto:info@bacanaklarlokantasi.com">
                     <i class="fa-solid fa-envelope"></i>
                     <div>
                         <h4>E-Posta Adresimiz</h4>
                         <p>info@bacanaklarlokantasi.com</p>
                     </div>
-                </div>
-                <div class="c-method-box">
-                    <i class="fa-solid fa-hashtag"></i>
+                </a>
+                <a class="c-method-box c-method-link" href="https://www.instagram.com/bacanaklarlokantasi/" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-instagram"></i>
                     <div>
                         <h4>Sosyal Medyada Biz</h4>
                         <p>@bacanaklarlokantasi</p>
                     </div>
-                </div>
+                </a>
             </div>
 
             <div class="contact-form-container animate-fade-up delay-3">
-                <form class="glowing-form" onsubmit="event.preventDefault(); alert('Mesajınız başarıyla bacanaklara iletildi!');">
+                <form class="glowing-form" id="contact-form">
                     <div class="form-group">
                         <label for="name">Adınız Soyadınız</label>
-                        <input type="text" id="name" placeholder="Örn: Ahmet Yılmaz" required>
+                        <input type="text" id="name" name="name" autocomplete="name" placeholder="Örn: Ahmet Yılmaz" required>
                     </div>
                     <div class="form-group">
                         <label for="email">E-Posta Adresiniz</label>
-                        <input type="email" id="email" placeholder="name@example.com" required>
+                        <input type="email" id="email" name="email" autocomplete="email" placeholder="name@example.com" required>
                     </div>
                     <div class="form-group">
                         <label for="message">Mesajınız</label>
-                        <textarea id="message" rows="5" placeholder="Söylemek istediklerinizi buraya yazın..." required></textarea>
+                        <textarea id="message" name="message" rows="5" placeholder="Söylemek istediklerinizi buraya yazın..." required></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
                         Mesajı Gönder <i class="fa-solid fa-paper-plane"></i>
                     </button>
                 </form>
+                <p class="form-note"><i class="fa-solid fa-circle-info"></i> Gönder butonu cihazınızdaki e-posta uygulamasını açar. Bir sonraki aşamada formu doğrudan site üzerinden gönderecek sisteme bağlayacağız.</p>
             </div>
 
         </div>
@@ -84,6 +89,19 @@
             <p>© 2026 Bacanaklar Lokantası. Tüm Hakları Saklıdır.</p>
         </div>
     </footer>
+
+
+    <div class="mobile-action-bar" aria-label="Hızlı işlemler">
+        <a href="tel:+905512204202" class="mobile-action">
+            <i class="fa-solid fa-phone"></i><span>Ara</span>
+        </a>
+        <a href="https://wa.me/905512204202?text=Merhaba%20Bacanaklar%20Lokantas%C4%B1%2C%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener noreferrer" class="mobile-action">
+            <i class="fa-brands fa-whatsapp"></i><span>WhatsApp</span>
+        </a>
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Bacanaklar%20Lokantas%C4%B1%2C%20Afyonkarahisar" target="_blank" rel="noopener noreferrer" class="mobile-action">
+            <i class="fa-solid fa-location-arrow"></i><span>Yol Tarifi</span>
+        </a>
+    </div>
 
     <script src="script.js"></script>
 </body>

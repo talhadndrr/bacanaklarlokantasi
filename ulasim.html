@@ -14,6 +14,10 @@
 
     <nav class="navbar">
         <a href="index.html" class="logo">Bacanaklar<span>.</span></a>
+
+        <button class="nav-toggle" type="button" aria-label="Menüyü aç/kapat" aria-expanded="false">
+            <i class="fa-solid fa-bars"></i>
+        </button>
         <ul class="nav-links">
             <li><a href="index.html">Ana Sayfa</a></li>
             <li><a href="menu.html">Menü</a></li>
@@ -51,7 +55,15 @@
                     </div>
                 </div>
 
-            </div> <!-- İŞTE EKSİK OLAN VE DÜZENİ BOZAN KAPATMA ETİKETİ BURASIYDI -->
+                <a class="u-card u-card-action" href="https://www.google.com/maps/dir/?api=1&destination=Bacanaklar%20Lokantas%C4%B1%2C%20Afyonkarahisar" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-solid fa-location-arrow"></i>
+                    <div>
+                        <h3>Yol Tarifi Al</h3>
+                        <p>Bulunduğunuz konumdan Bacanaklar Lokantası'na navigasyonu tek dokunuşla başlatın.</p>
+                    </div>
+                </a>
+
+            </div>
 
 
             <!-- 2. KISIM: HARİTA BÖLÜMÜ -->
@@ -68,7 +80,7 @@
                         referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
                     <!-- Dışarı Yönlendiren Buton Linki -->
-                    <a href="https://www.google.com/maps/place/Bacanaklar+lokantası/@38.7551238,30.5512127,17z/" target="_blank" class="map-overlay-btn">
+                    <a href="https://www.google.com/maps/place/Bacanaklar+lokantası/@38.7551238,30.5512127,17z/" target="_blank" rel="noopener noreferrer" class="map-overlay-btn">
                         <i class="fa-solid fa-arrow-up-right-from-square"></i> Büyük Haritada Aç
                     </a>
                 </div>
@@ -82,6 +94,19 @@
             <p>© 2026 Bacanaklar Lokantası. Tüm Hakları  Talha Dündar'da Saklıdır.</p>
         </div>
     </footer>
+
+
+    <div class="mobile-action-bar" aria-label="Hızlı işlemler">
+        <a href="tel:+905512204202" class="mobile-action">
+            <i class="fa-solid fa-phone"></i><span>Ara</span>
+        </a>
+        <a href="https://wa.me/905512204202?text=Merhaba%20Bacanaklar%20Lokantas%C4%B1%2C%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener noreferrer" class="mobile-action">
+            <i class="fa-brands fa-whatsapp"></i><span>WhatsApp</span>
+        </a>
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Bacanaklar%20Lokantas%C4%B1%2C%20Afyonkarahisar" target="_blank" rel="noopener noreferrer" class="mobile-action">
+            <i class="fa-solid fa-location-arrow"></i><span>Yol Tarifi</span>
+        </a>
+    </div>
 
     <script src="script.js"></script>
 </body>

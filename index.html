@@ -178,6 +178,10 @@
     <!-- NAVBAR -->
     <nav class="navbar animate-fade-up">
         <a href="index.html" class="logo">Bacanaklar<span>.</span></a>
+
+        <button class="nav-toggle" type="button" aria-label="Menüyü aç/kapat" aria-expanded="false">
+            <i class="fa-solid fa-bars"></i>
+        </button>
         <ul class="nav-links">
             <li><a href="index.html" class="active">Ana Sayfa</a></li>
             <li><a href="menu.html">Menü</a></li>
@@ -211,8 +215,8 @@
                     <a href="menu.html" class="btn btn-primary anim-pulse-button" style="text-decoration: none;">
                         Menüyü Keşfet <i class="fa-solid fa-arrow-right"></i>
                     </a>
-                    <a href="index.html#about" class="btn btn-secondary" style="text-decoration: none;">
-                        <i class="fa-solid fa-play"></i> Hakkımızda
+                    <a href="tel:+905512204202" class="btn btn-secondary" style="text-decoration: none;">
+                        <i class="fa-solid fa-phone"></i> Hemen Ara
                     </a>
                 </div>
             </div>
@@ -221,7 +225,7 @@
                 <div class="glow-bg"></div>
                 <div class="interactive-layer" id="parallax-scene">
                     <div class="main-dish-wrapper" data-depth="0.2">
-                        <img src="bacanaklarlokanta.png" alt="Sıcak Çorba" class="main-dish">
+                        <img src="bacanaklarlokanta.png" alt="Sıcak çorba ve Bacanaklar Lokantası sunumu" class="main-dish" decoding="async" fetchpriority="high">
                         <div class="steam-container" id="steam-zone"></div>
                     </div>
                     <div class="floating-item pepper" data-depth="0.5">🌶️</div>
@@ -250,7 +254,7 @@
             <!-- 3D TILT EKLENMİŞ KARTLAR -->
             <div class="menu-card reveal delay-1" data-tilt data-tilt-glare data-tilt-max-glare="0.3" data-tilt-max="15">
                 <div class="card-img-container anim-zoom-pan">
-                    <img src="kellepaca.png" alt="Kelle Paça Çorbası">
+                    <img src="kellepaca.png" alt="Kelle Paça Çorbası" loading="lazy" decoding="async">
                     <span class="card-badge">Çorba</span>
                 </div>
                 <div class="card-info">
@@ -264,7 +268,7 @@
 
             <div class="menu-card reveal delay-2" data-tilt data-tilt-glare data-tilt-max-glare="0.3" data-tilt-max="15">
                 <div class="card-img-container anim-zoom-pan">
-                    <img src="ayakpaca.png" alt="Ayak Paça">
+                    <img src="ayakpaca.png" alt="Ayak Paça" loading="lazy" decoding="async">
                     <span class="card-badge">Ev Yemeği</span>
                 </div>
                 <div class="card-info">
@@ -278,7 +282,7 @@
 
             <div class="menu-card reveal delay-3" data-tilt data-tilt-glare data-tilt-max-glare="0.3" data-tilt-max="15">
                 <div class="card-img-container anim-zoom-pan">
-                    <img src="tandircorbasi.png" alt="Zeytinyağlı Sarmalar">
+                    <img src="tandircorbasi.png" alt="Tandır Çorbası" loading="lazy" decoding="async">
                     <span class="card-badge">Çorba</span>
                 </div>
                 <div class="card-info">
@@ -332,10 +336,10 @@
             <div class="about-gallery">
                 <div class="gallery-wrapper">
                     <div class="img-box box-1 reveal delay-1 anim-zoom-pan">
-                        <img src="karahisar.jpg" alt="Karahisar Kalesi">
+                        <img src="karahisar.jpg" alt="Karahisar Kalesi" loading="lazy" decoding="async">
                     </div>
                     <div class="img-box box-2 reveal delay-3 anim-zoom-pan">
-                        <img src="akarcay.jpg" alt="Akarçay">
+                        <img src="akarcay.jpg" alt="Akarçay" loading="lazy" decoding="async">
                     </div>
                     <div class="deco-circle reveal delay-2 anim-spin-slow"></div>
                 </div>
@@ -365,7 +369,7 @@
                     <li class="day-row" data-day="4"><span>Perşembe</span> <span>08.00 - 04.00</span></li>
                     <li class="day-row" data-day="5"><span>Cuma</span> <span>08.00 - 04.00</span></li>
                     <li class="day-row" data-day="6"><span>Cumartesi</span> <span>08:00 - 04.00</span></li>
-                    <li class="day-row" data-day="0"><span>Pazar</span> <span class="closed">19.00 - 03.00</span></li>
+                    <li class="day-row" data-day="0"><span>Pazar</span> <span>19.00 - 03.00</span></li>
                 </ul>
             </div>
 
@@ -383,7 +387,7 @@
                         loading="lazy" 
                         referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
-                    <a href="https://maps.google.com/maps?q=Bacanaklar%20lokantas%C4%B1,%20Afyonkarahisar&t=&z=16&ie=UTF8&iwloc=&output=embed">
+                    <a href="https://www.google.com/maps/search/?api=1&query=Bacanaklar%20Lokantas%C4%B1%2C%20Afyonkarahisar" target="_blank" rel="noopener noreferrer">
                         <i class="fa-solid fa-arrow-up-right-from-square"></i> Haritalar'da aç
                     </a>
                 </div>
@@ -396,57 +400,19 @@
         </div>
     </footer>
 
+
+    <div class="mobile-action-bar" aria-label="Hızlı işlemler">
+        <a href="tel:+905512204202" class="mobile-action">
+            <i class="fa-solid fa-phone"></i><span>Ara</span>
+        </a>
+        <a href="https://wa.me/905512204202?text=Merhaba%20Bacanaklar%20Lokantas%C4%B1%2C%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener noreferrer" class="mobile-action">
+            <i class="fa-brands fa-whatsapp"></i><span>WhatsApp</span>
+        </a>
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Bacanaklar%20Lokantas%C4%B1%2C%20Afyonkarahisar" target="_blank" rel="noopener noreferrer" class="mobile-action">
+            <i class="fa-solid fa-location-arrow"></i><span>Yol Tarifi</span>
+        </a>
+    </div>
+
     <script src="script.js"></script>
-    
-    <!-- YENİ: DAKTİLO, ATEŞ KIVILCIMLARI VE EKRAN SCRİPTLERİ -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            // YENİ 3D SİNEMATİK GİRİŞ EFEKTİ
-            setTimeout(function() {
-                var loader = document.getElementById('preloader');
-                if(loader) {
-                    // İçeri doğru büyüyerek kaybolma sınıfını ekle
-                    loader.classList.add('fade-out-zoom');
-                    setTimeout(function() { loader.style.display = "none"; }, 1000); 
-                }
-            }, 2000);
-
-            // 2. Tpyed.js Daktilo Efekti
-            var typed = new Typed('#daktilo-yazi', {
-                strings: [
-                    'Ruhu Isıtan <br> <span class="anim-text-flow">Geleneksel</span> Lezzetler', 
-                    'Her Sabah <br> <span class="anim-text-flow">Sıcacık</span> Çorbalar',
-                    'Anne Eli Değmiş <br> <span class="anim-text-flow">Nefis</span> Yemekler'
-                ],
-                typeSpeed: 60,   // Yazma hızı
-                backSpeed: 40,   // Silme hızı
-                backDelay: 3000, // Ekranda kalma süresi
-                loop: true,      // Sürekli tekrar et
-                showCursor: true,
-                cursorChar: '|',
-            });
-
-            // 3. Arka Plan Ateş Kıvılcımları (Sparks)
-            function createSpark() {
-                const sparksZone = document.getElementById('sparks-zone');
-                if(!sparksZone) return;
-                const spark = document.createElement('div');
-                spark.classList.add('spark');
-                
-                let size = Math.random() * 4 + 2; 
-                spark.style.width = size + 'px';
-                spark.style.height = size + 'px';
-                spark.style.left = Math.random() * 100 + '%';
-                
-                let duration = Math.random() * 3 + 3;
-                spark.style.animationDuration = duration + 's';
-                
-                sparksZone.appendChild(spark);
-                
-                setTimeout(() => { spark.remove(); }, duration * 1000);
-            }
-            setInterval(createSpark, 300); // Her 300ms'de bir kıvılcım çıkar
-        });
-    </script>
 </body>
 </html>
